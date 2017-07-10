@@ -59,13 +59,12 @@
 		snake_array.unshift(newhead);
 		if(nx == food.x && ny == food.y){
 			create_food();
-			score = score * 10;
+			score = score + 1;
 		}
 		else {
 			snake_array.pop(); //pops out the last cell (the end of the tail)
-			score = score + 1;
 		}
-		create_food();
+		//create_food();
 	}
 	
 	//Lets create the food now
