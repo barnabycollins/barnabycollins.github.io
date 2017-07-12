@@ -8,33 +8,40 @@ Licence URI: http://www.os-templates.com/template-terms
 -->
 <html>
 <head>
-<title>E-Wallt</title>
+<title>Arialogic | Pages | Basic Grid</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-<link rel="shortcut icon" href="images/ewallt.ico" type="image/x-icon">
-<link rel="icon" href="images/ewallt.ico" type="image/x-icon">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<style type="text/css">
+/* DEMO ONLY */
+.container .demo{text-align:center;}
+.container .demo div{padding:8px 0;}
+.container .demo div:nth-child(odd){color:#FFFFFF; background:#CCCCCC;}
+.container .demo div:nth-child(even){color:#FFFFFF; background:#979797;}
+@media screen and (max-width:900px){.container .demo div{margin-bottom:0;}}
+/* DEMO ONLY */
+</style>
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- Top Background Image Wrapper -->
-<div class="bgded" style="background-image:url('images/ewallt3.png');"> 
+<div class="bgded" style="background-image:url('../images/demo/backgrounds/01.png');"> 
   <!-- ################################################################################################ -->
   <div class="wrapper overlay">
     <header id="header" class="hoc clear">
       <nav id="mainav" class="clear"> 
         <!-- ################################################################################################ -->
         <ul class="clear">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a class="drop" href="#">Pages</a>
+          <li><a href="../index.html">Home</a></li>
+          <li class="active"><a class="drop" href="#">Pages</a>
             <ul>
-              <li><a href="pages/gallery.html">Gallery</a></li>
-              <li><a href="pages/full-width.html">Full Width</a></li>
-              <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
-              <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-              <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="full-width.html">Full Width</a></li>
+              <li><a href="sidebar-left.html">Sidebar Left</a></li>
+              <li><a href="sidebar-right.html">Sidebar Right</a></li>
+              <li class="active"><a href="basic-grid.html">Basic Grid</a></li>
             </ul>
           </li>
           <li><a class="drop" href="#">Dropdown</a>
@@ -59,7 +66,8 @@ Licence URI: http://www.os-templates.com/template-terms
       </nav>
       <div id="logo"> 
         <!-- ################################################################################################ -->
-        <a href="index.html"><img src="images/ewallt.png"/></a>
+        <h1><a href="../index.html">Arialogic</a></h1>
+        <p>phasellus suscipit ultricies</p>
         <!-- ################################################################################################ -->
       </div>
     </header>
@@ -67,15 +75,17 @@ Licence URI: http://www.os-templates.com/template-terms
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
-  <div id="pageintro" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <article>
-      <div class="introtxt">
-        <h2 class="heading">The ultimate in state-of-the-art wallet technology.</h2>
-        <p>We have worked tirelessly to bring the future to your pocket.</p>
-      </div>
-    </article>
-    <!-- ################################################################################################ -->
+  <div class="wrapper row2">
+    <div id="breadcrumb" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Lorem</a></li>
+        <li><a href="#">Ipsum</a></li>
+        <li><a href="#">Dolor</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
   </div>
   <!-- ################################################################################################ -->
 </div>
@@ -87,108 +97,50 @@ Licence URI: http://www.os-templates.com/template-terms
   <main class="hoc container clear"> 
     <!-- main body -->
     <!-- ################################################################################################ -->
-    <div class="center btmspace-50">
-      <h2 class="heading">Colour options</h2>
-      <p>We are here to make your life easier. This is why, alongside our flagship Ebony Black and Milky White, we are adding a <strong>custom colour</strong> option to fit all your needs.</p>
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+      <h2>Half</h2>
+      <!-- ################################################################################################ -->
+      <div class="group btmspace-50 demo">
+        <div class="one_half first">1/2</div>
+        <div class="one_half">1/2</div>
+      </div>
+      <!-- ################################################################################################ -->
+      <h2>Quarter</h2>
+      <!-- ################################################################################################ -->
+      <div class="group btmspace-50 demo">
+        <div class="one_quarter first">1/4</div>
+        <div class="one_quarter">1/4</div>
+        <div class="one_quarter">1/4</div>
+        <div class="one_quarter">1/4</div>
+      </div>
+      <div class="group btmspace-50 demo">
+        <div class="one_quarter first">1/4</div>
+        <div class="one_quarter">1/4</div>
+        <div class="two_quarter">2/4 or 1/2</div>
+      </div>
+      <div class="group btmspace-50 demo">
+        <div class="one_quarter first">1/4</div>
+        <div class="three_quarter">3/4</div>
+      </div>
+      <!-- ################################################################################################ -->
+      <h2>Third</h2>
+      <!-- ################################################################################################ -->
+      <div class="group btmspace-50 demo">
+        <div class="one_third first">1/3</div>
+        <div class="one_third">1/3</div>
+        <div class="one_third">1/3</div>
+      </div>
+      <div class="group demo">
+        <div class="one_third first">1/3</div>
+        <div class="two_third">2/3</div>
+      </div>
+      <!-- ################################################################################################ -->
     </div>
-    <ul class="nospace group blocks">
-      <li class="one_third first bgded overlay" style="background-image:url('images/black.jpg');"><p style="font-weight: bold;">Ebony Black</p><a class="btn medium" href="#">View info</a><br></li>
-      <li class="one_third bgded overlay" style="background-image:url('images/white.jpg');"><p style="font-weight: bold;">Milky White</p><a class="btn medium" href="#">View info</a><br></li>
-      <li class="one_third bgded overlay" style="background-image:url('images/rainbow.jpg');"><p style="font-weight: bold;">Custom Design!</p><a class="btn medium" href="#">View info</a><br></li>
-    </ul>
     <!-- ################################################################################################ -->
     <!-- / main body -->
     <div class="clear"></div>
   </main>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
-  <section id="testimonials" class="hoc container clear"> 
-    <!-- ################################################################################################ -->
-    <div class="center btmspace-50">
-      <h2 class="heading">Our founding team</h2>
-      <p>Quite possibly the best team on the course.</p>
-    </div>
-    <ul class="nospace group">
-      <li class="one_half first">
-        <div class="clear"><img src="images/demo/80x80.png" alt=""> <span class="block"><strong>Mark Kleyner</strong> / <em>Head Visionary</em></span>
-          <blockquote>Ornare sed nec sagittis nisi nulla nec aliquam mi interdum et malesuada fames&hellip;</blockquote>
-        </div>
-      </li>
-      <li class="one_half">
-        <div class="clear"><img src="images/demo/80x80.png" alt=""> <span class="block"><strong>B.Doe</strong> / <em>Position, Company Name</em></span>
-          <blockquote>Ac ante ipsum primis in faucibus curabitur cursus est nec turpis posuere aliquet&hellip;</blockquote>
-        </div>
-      </li>
-    </ul>
-    <!-- ################################################################################################ -->
-  </section>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <section class="hoc container clear"> 
-    <!-- ################################################################################################ -->
-    <div class="center btmspace-50">
-      <h2 class="heading">Proin a felis tellus donec</h2>
-      <p>Fringilla nisi ut arcu facilisis gravida nullam bibendum nisi risus id viverra felis pharetra eu donec ut lorem risus nullam iaculis lacinia massa et accumsan urna laoreet fermentum etiam ipsum enim bibendum id varius.</p>
-    </div>
-    <ul class="nospace elements">
-      <li class="one_third first">
-        <article><a href="#"><img src="images/demo/320x220.png" alt=""></a>
-          <div class="txtwrap">
-            <h6 class="heading">Malesuada posuere</h6>
-            <time datetime="2045-04-06">6<sup>th</sup> April 2045</time>
-            <p>Ante pulvinar hendrerit ipsum ut scelerisque sapien purus sit amet&hellip;</p>
-            <footer><a href="#">Read More &raquo;</a></footer>
-          </div>
-        </article>
-      </li>
-      <li class="one_third">
-        <article><a href="#"><img src="images/demo/320x220.png" alt=""></a>
-          <div class="txtwrap">
-            <h6 class="heading">Vivamus sit amet</h6>
-            <time datetime="2045-04-05">5<sup>th</sup> April 2045</time>
-            <p>Sagittis in aenean porta semper tortor vel blandit magna integer ac&hellip;</p>
-            <footer><a href="#">Read More &raquo;</a></footer>
-          </div>
-        </article>
-      </li>
-      <li class="one_third">
-        <article><a href="#"><img src="images/demo/320x220.png" alt=""></a>
-          <div class="txtwrap">
-            <h6 class="heading">Pulvinar nisl non</h6>
-            <time datetime="2045-04-04">4<sup>th</sup> April 2045</time>
-            <p>Neque malesuada euismod proin sit amet nisl velit mauris orci nisl&hellip;</p>
-            <footer><a href="#">Read More &raquo;</a></footer>
-          </div>
-        </article>
-      </li>
-    </ul>
-    <!-- ################################################################################################ -->
-  </section>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper coloured">
-  <div class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <figure id="logos">
-      <ul class="nospace group">
-        <li><a href="#"><img src="images/demo/logo.png" alt=""></a></li>
-        <li><a href="#"><img src="images/demo/logo.png" alt=""></a></li>
-        <li><a href="#"><img src="images/demo/logo.png" alt=""></a></li>
-        <li><a href="#"><img src="images/demo/logo.png" alt=""></a></li>
-        <li><a href="#"><img src="images/demo/logo.png" alt=""></a></li>
-      </ul>
-      <figcaption class="hidden"><a class="btn small" href="#">More &raquo;</a></figcaption>
-    </figure>
-    <!-- ################################################################################################ -->
-  </div>
 </div>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -270,11 +222,11 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-<script src="layout/scripts/jquery.min.js"></script>
-<script src="layout/scripts/jquery.backtotop.js"></script>
-<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
 <!-- IE9 Placeholder Support -->
-<script src="layout/scripts/jquery.placeholder.min.js"></script>
+<script src="../layout/scripts/jquery.placeholder.min.js"></script>
 <!-- / IE9 Placeholder Support -->
 </body>
 </html>
