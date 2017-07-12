@@ -99,9 +99,9 @@ File: Layout CSS
 /* Logos
 --------------------------------------------------------------------------------------------------------------- */
 #logos{padding:30px 0;}
-#logos li{float:left; width:16%; margin-left:5%;}
+#logos li{float:left; margin-left:5%;}
 #logos li:first-child{margin-left:0;}
-#logos li img{opacity:.5;}
+#logos li img{height: 60px;}
 #logos li:hover img{opacity:1;}
 
 
