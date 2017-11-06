@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
-  <span id="London_z716" class="clock"></span>
-  <script src="//widget.time.is/en_gb.js"></script>
-  <script>
-  time_is_widget.init({London_z716:{template:"TIME<br>DATE", time_format:"hours:minutes", date_format:"dayname daynum/monthnum/yy"}});
-  </script>
-  <h1>oi</h1>
+  <div id="clock">
+    <span id="time"></span>
+    <br>
+    <span id="date">The time is loading...</span>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+  <script src="js/jquery.1.11.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.js" ></script>
+  <script src="js/clock.js" ></script>
 </html>

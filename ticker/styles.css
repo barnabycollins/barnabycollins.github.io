@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html {
+  background-color: #444444;
+  font-family: 'Open Sans', sans-serif;
+}
+#clock {
+  width: 40vw;
+  margin: 0px;
+  padding: 5vh 0px;
+  text-align: center;
+  color: #ffffff;
+}
+#clock span {
+  margin: 0px auto;
+}
+#time {
+  font-size: 15vh;
+  line-height: 15vh;
+}
+#date {
+  font-size: 5vh;
+  line-height: 5vh;
+}
