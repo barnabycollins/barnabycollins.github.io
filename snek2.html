@@ -13,7 +13,7 @@
 	function create_snake()
 	{
 		snake_array = []; //Empty array to start with
-		
+
 		snake_array[0] = {x: 6, y:0}; //position 0 in the array is the head of the snake
 		snake_array[1] = {x: 5, y:0};
 		snake_array[2] = {x: 4, y:0};
@@ -24,11 +24,11 @@
 
 	function keystroke(evt)
 	{
-		if(evt.keyCode == 37) d = "left";
-		else if (evt.keyCode == 38) d = "up";
-		else if (evt.keyCode == 39) d = "right";
-		else if (evt.keyCode == 40) d = "down";
-		
+		if(evt.keyCode == 65) d = "left";
+		else if (evt.keyCode == 87) d = "up";
+		else if (evt.keyCode == 68) d = "right";
+		else if (evt.keyCode == 83) d = "down";
+
 	}
 
 	//The movement code for the snake, including eating food, and checking for crashes
@@ -38,7 +38,7 @@
 		//First get the current position of the head of the snake.
 		var nx = snake_array[0].x;
 		var ny = snake_array[0].y;
-		
+
 		//Now adjust these values according to the direction of travel
 		if(direction == "right") nx++;
 		else if(direction == "left") nx--;
@@ -54,7 +54,7 @@
 			init();
 			return;
 		}
-		
+
 		var newhead = {x: nx, y: ny};
 		snake_array.unshift(newhead);
 		if(nx == food.x && ny == food.y){
@@ -66,21 +66,21 @@
 		}
 		//create_food();
 	}
-	
+
 	//Lets create the food now
 	function create_food()
 	{
 		//TODO: set the food to a random position: x= 0 to maxx, y=0 to maxy
 		food = {
-			x: Math.round(Math.random() * (maxx-1)), 
-			y: Math.round(Math.random() * (maxy-1)), 
+			x: Math.round(Math.random() * (maxx-1)),
+			y: Math.round(Math.random() * (maxy-1)),
 		};
 	}
-		
+
 	//returns true if the snake has hit a wall
 	//or if it has hit itself (x and y exist in the array)
 	function check_collision(x, y, array)
-	{	
+	{
 		for(var i=0; i < array.length; i = i + 1)
 		{
 			if(array[i].x == x && array[i].y == y)
@@ -88,7 +88,7 @@
 				return true;
 			}
 		}
-		
+
 		if(x < 0 || x >= maxx || y < 0 || y >= maxy) {
 			return true;
 		}

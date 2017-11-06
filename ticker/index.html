@@ -8,8 +8,13 @@
     <br>
     <span id="date">The time is loading...</span>
   </div>
+  <span id="sportsfeed"></span>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="js/jquery.1.11.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.js" ></script>
   <script src="js/clock.js" ></script>
+  <script>
+    $( "#sportsfeed" ).load( "http://www.reigategrammarsport.org/Default.asp a.Link" );
+    $( "#sportsfeed" ).load( "https://api.twitch.tv/kraken/streams/rewindrl?client_id=5j0r5b7qb7kro03fvka3o8kbq262wwm a.Link" );
+  </script>
 </html>
