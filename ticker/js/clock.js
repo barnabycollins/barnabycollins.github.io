@@ -6,7 +6,7 @@ function displayTime() {
 function displayDate() {
   var date = moment().format('dddd Do MMMM YYYY');
   $('#date').html(date);
-  setTimeout(DisplayDate, 1800);
+  setTimeout(displayDate, 1800);
 }
 displayTime();
 displayDate();
