@@ -22,7 +22,7 @@ body {
   padding: 10px;
 }
 #nav-img:hover {
-	animation: spin 0.5s linear;
+	animation: spin 0.75s linear infinite;
 }
 nav {
   height: 10vh;
