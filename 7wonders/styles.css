@@ -90,6 +90,27 @@ h3 {
 	background: url("img/giza.jpg");
   background-size: cover;
 }
+#wall {
+	background: url("img/wall.jpg");
+  background-size: cover;
+}
+#petra {
+	background: url("img/petra.jpg");
+  background-size: cover;
+}
+#rome {
+	background: url("img/rome.jpg");
+  background-size: cover;
+}
+#chichen {
+	background: url("img/chichen.jpg");
+  background-size: cover;
+}
+#macchu {
+	background: url("img/macchu.jpg");
+  background-size: cover;
+}
 p {
 	padding-bottom: 0px;
+	text-align: justify;
 }
