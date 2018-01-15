@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+html {
+    min-height: 100vh;
+    width: 100vw;
+    background: url("mountains.jpg");
+    background-size: cover;
+    margin: 0px;
+    font-family: "Oswald", sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0px;
+}
+#content {
+    text-align: center;
+    letter-spacing: 5px;
+}
+#content h1 {
+    text-transform: uppercase;
+}
+#loadtext {
+    transition: all 0.3s;
+    position: absolute;
+    top: 60%;
+    color: #ffffff;
+    opacity: 1;
+}
