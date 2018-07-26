@@ -42,6 +42,46 @@ nav#home-nav {
     margin: 0px auto;
     max-width: 1100px;
 }
+@media (max-width: 1150px) {
+    .hcontainer {
+        padding: 0px 20px;
+        width: auto;
+    }
+}
+@media (max-width: 900px) {
+    nav ul li.nav-btn a {
+        font-size: 20px;
+        box-shadow: none;
+    }
+}
+@media (max-width: 700px) {
+    div.mosaic-row {
+        display: block;
+    }
+    img.mosaic-img, img.mosaic-img-lrg {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 575px) {
+    nav ul li.nav-btn a {
+        font-size: 16px;
+        letter-spacing: 0px;
+        box-shadow: none;
+        border-bottom: 1px solid rgba(0,0,0,0);
+    }
+    nav ul li.nav-btn a:hover {
+        box-shadow: none;
+    }
+    #header h1 {
+        font-size: 25px;
+    }
+    span#headerpurp {
+        font-size: 50px;
+    }
+}
 nav .hcontainer {
     display: flex;
     justify-content: center;
@@ -56,20 +96,20 @@ nav img {
 nav ul {
     display: table;
     width: 100%;
-    padding: 0px 50px;
+    padding: 0px 3%;
+    list-style-type: none;
+    table-layout: fixed;
 }
 nav li.nav-btn {
-    list-style-type: none;
     margin: 0px;
     padding: 0px;
     display: table-cell;
-    width: auto;
     flex: 1 1 auto;
     text-align: center;
 }
 nav li.nav-btn a {
     display: flex;
-    width: 150px;
+    max-width: 150px;
     align-items: center;
     justify-content: center;
     margin: auto;
@@ -110,11 +150,13 @@ li.nav-active a {
     color: #ffffff;
     background: url("../img/engineersbg.jpg");
     background-size: cover;
+    background-position: center;
+    width: 100%;
 }
 #header h1 {
     padding-top: 200px;
     margin-top: 0px;
-    width: 1100px;
+    width: 100%;
     text-transform: uppercase;
 }
 .top-item {
