@@ -70,7 +70,6 @@ nav#home-nav {
         font-size: 16px;
         letter-spacing: 0px;
         box-shadow: none;
-        border-bottom: 1px solid rgba(0,0,0,0);
     }
     nav ul li.nav-btn a:hover {
         box-shadow: none;
@@ -80,6 +79,9 @@ nav#home-nav {
     }
     span#headerpurp {
         font-size: 50px;
+    }
+    nav a img {
+        height: 40px;
     }
 }
 nav .hcontainer {
