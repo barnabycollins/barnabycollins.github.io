@@ -241,11 +241,11 @@ h3 {
 }
 .banner {
     height: 120px;
+    background-size: cover;
+    background-position: center;
 }
 #contact-banner {
     background: url("../img/typing.jpg");
-    background-size: cover;
-    background-position: center;
 }
 .nopad {
     padding-top: 1%;
@@ -299,6 +299,12 @@ nav#footer {
     font-size: 16px;
     padding-bottom: 4px;
 }
+.footer-link {
+    transition: all 0.2s;
+}
+.footer-link:hover {
+    color: #b822e3;
+}
 .filters-tbl tr {
     vertical-align: top;
 }
@@ -329,7 +335,7 @@ nav#footer {
 .filters-tbl a {
     cursor: pointer;
     transition: all 0.2s;
-        border-bottom: 1px solid rgba(255, 255, 255, 0);
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
 .filters-tbl a:hover {
     border-bottom: 1px solid rgba(255, 255, 255, 1);
@@ -350,11 +356,167 @@ nav#footer {
 }
 #banner-404 {
     background: url("../img/404.png");
-    background-size: cover;
-    background-position: center;
     height: 200px;
 }
 #forum-demo-img {
     width: 100%;
     background-color: #2c2c2c;
+}
+#sub-header {
+    background: url("../img/cad2.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0px 100px 0px;
+    /*background-attachment: fixed;*/
+}
+#sub-header h1 {
+    text-transform: uppercase;
+}
+.float-panel {
+    background-color: rgba(32, 32, 32, .4);
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+#sub-email {
+    display: flex;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 0px;
+    border: 2px solid rgba(255,255,255,0);
+    transition: all 0.2s;
+}
+#sub-email:focus {
+    border: 2px solid #b822e3;
+}
+.float-panel form {
+    display: flex;
+    margin: 0px;
+}
+#sub-button {
+    display: flex;
+    background-color: #b822e3;
+    font-size: 20px;
+    padding: 19px;
+    margin: 0px;
+    text-decoration: none;
+    border: 2px solid #b822e3;
+    transition: all 0.5s ease;
+    margin-left: 3%;
+}
+#sub-button:hover {
+    background-color: #ffffff;
+    color: #b822e3;
+}
+#price {
+    margin-left: 100px;
+    font-size: 40px;
+}
+#price-time {
+    font-size: 20px;
+}
+#sub-info {
+    display: table;
+    width: 100%;
+    margin: 50px -10px;
+    border-spacing: 10px;
+}
+#sub-edu, #sub-details {
+    display: table-cell;
+    background-color:  #2c2c2c;
+    margin: 5px;
+    padding: 10px;
+    text-align: justify;
+    color: #eee;
+}
+#sub-edu h2, #sub-details h2 {
+    color: #b822e3;
+    text-align: center;
+}
+#sub-edu {
+    width: 30%;
+    border-radius: 5px 0px 0px 5px;
+}
+#sub-details {
+    width: 70%;
+    border-radius: 0px 5px 5px 0px;
+}
+#edu-img {
+    width: 100%;
+}
+.immersive-row {
+    padding: 2%;
+}
+#immersive-1 {
+    background: url("../img/cad3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+#immersive-2 {
+    background: url("../img/cad5.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+#immersive-3 {
+    background: url("../img/cad4.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+#immersive-4 {
+    background: url("../img/cad6.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+#immersive-5 {
+    background: url("../img/cad7.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+#immersive-6 {
+    background: url("../img/cad8.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.immersive-content {
+    padding: 1%;
+    background-color: rgba(40,40,40,.4);
+    text-align: justify;
+}
+.immersive-content p {
+    margin: 1em 0px 0px 0px;
+}
+.immersive-r {
+    margin-left: 30%;
+}
+.immersive-l {
+    margin-right: 30%;
+}
+#partners-header {
+    background: url("../img/art.jpg");
+}
+#partners-header h1 {
+    padding: 5% 0px;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(30, 30, 30, 0.5);
+}
+#partners-table {
+    margin-top: 50px;
+    background-color: #444;
+    display: table;
+    width: 100%;
+}
+.partners-content {
+    display: table-cell;
+    padding: 20px;
+    width: 50%;
+    text-align: justify;
+}
+#partners-art {
+    border-right: 5px solid #b822e3;
+}
+#partners-corp {
+    border-left: 5px solid #b822e3;
 }
