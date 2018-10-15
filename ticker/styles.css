@@ -63,24 +63,20 @@ span#name {
   top: 2vw;
 }
 #twitter-container {
-  width: 40vw;
-  height: 90vh;
-  position: absolute;
-  top: 8vh;
-  right: 0px;
+  width: 35vw;
+  height: 88vh;
+  margin-top: 2vh;
 }
 #twitter-title {
   color: #ffffff;
   font-size: 1.3vw;
   line-height: 1.3vw;
-  position: absolute;
   top: 4vh;
   left: 63vw;
   margin: 0px;
 }
 #twitter-frame {
-  margin: 0px 2vw 0px 3vw;
-  height: 89vh;
+  height: 88vh;
 }
 #twitter-widget-0 {
   transform: scale(1.25);
@@ -92,4 +88,28 @@ span#name {
   width: 10px;
   margin: 0px;
   margin-left: 20vw;
+}
+#carousel-bg {
+  background: url("img/Cuths.JPG");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 60vw;
+}
+.carousel-item {
+  position: absolute;
+  top: 0px;
+  left: 60vw;
+  transition: left 0.5s ease;
+  padding: 4vh 2vw 0px 3vw;
+  height: 100vh;
+  box-shadow: 0px 0px .5vw 0vw #333333;
+}
+#carousel1 {
+  background-color: #292F33;
+}
+#carousel2 {
+  display: none;
 }
