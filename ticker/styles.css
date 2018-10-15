@@ -21,10 +21,17 @@ body {
   margin: 0px;
   overflow: hidden;
 }
+#meme {
+  background-color: #ff0000;
+  height: 40vh;
+  width: 10px;
+  margin: 0px;
+  margin-left: 50vw;
+}
 #clock {
   width: 40vw;
   margin: 0px;
-  padding: 2vh 0px;
+  padding: 5vh 0px 2vh 0px;
   text-align: center;
   color: #ffffff;
   position: absolute;
@@ -36,15 +43,15 @@ body {
   display: block;
 }
 .welcome {
-  font-size: 7vh;
-  line-height: 7vh;
-  height: 7vh;
+  font-size: 6vh;
+  line-height: 6vh;
+  height: 6vh;
 }
 span#name {
   margin-top: 1vh;
   font-weight: bold;
-  margin-bottom: 8vh;
-  height: 7vh;
+  margin-bottom: 5vh;
+  height: 6vh;
 }
 #time {
   font-size: 11vh;
@@ -56,11 +63,18 @@ span#name {
   line-height: 4vh;
   height: 4vh;
 }
+#coatcont {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 20vw;
+  height: 40vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 #coat {
   width: 16vw;
-  position: absolute;
-  left: 2vw;
-  top: 2vw;
 }
 #twitter-container {
   width: 35vw;
@@ -81,13 +95,6 @@ span#name {
 #twitter-widget-0 {
   transform: scale(1.25);
   transform-origin: 0 0;
-} 
-#meme {
-  background-color: #ff0000;
-  height: 42vh;
-  width: 10px;
-  margin: 0px;
-  margin-left: 20vw;
 }
 #carousel-bg {
   background: url("img/Cuths.JPG");
@@ -102,14 +109,18 @@ span#name {
   position: absolute;
   top: 0px;
   left: 60vw;
-  transition: left 0.5s ease;
+  transition: left 0.5s ease, box-shadow 0.3s ease;
   padding: 4vh 2vw 0px 3vw;
   height: 100vh;
-  box-shadow: 0px 0px .5vw 0vw #333333;
+  width: 40vw;
+}
+#carousel0 {
+  background-color: rgba(41,47,51,0.97);
 }
 #carousel1 {
-  background-color: #292F33;
+  background-color: rgba(0,25.5,0,0.97);
+  color: #CCAA00;
 }
 #carousel2 {
-  display: none;
+  background-color: rgba(105, 105, 105, 0.97);
 }
