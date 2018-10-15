@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url('OpenSans/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+  @font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans/OpenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    }
+
 html {
   background-color: #444444;
   font-family: 'Open Sans', sans-serif;
@@ -58,8 +71,8 @@ span#name {
 }
 #twitter-title {
   color: #ffffff;
-  font-size: 3vh;
-  line-height: 3vh;
+  font-size: 1.3vw;
+  line-height: 1.3vw;
   position: absolute;
   top: 4vh;
   left: 63vw;
