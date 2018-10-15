@@ -4,21 +4,79 @@ html {
   background-color: #444444;
   font-family: 'Open Sans', sans-serif;
 }
+body {
+  margin: 0px;
+  overflow: hidden;
+}
 #clock {
   width: 40vw;
   margin: 0px;
-  padding: 5vh 0px;
+  padding: 2vh 0px;
   text-align: center;
   color: #ffffff;
+  position: absolute;
+  top: 0px;
+  left: 20vw;
 }
 #clock span {
   margin: 0px auto;
+  display: block;
+}
+.welcome {
+  font-size: 7vh;
+  line-height: 7vh;
+  height: 7vh;
+}
+span#name {
+  margin-top: 1vh;
+  font-weight: bold;
+  margin-bottom: 8vh;
+  height: 7vh;
 }
 #time {
-  font-size: 15vh;
-  line-height: 15vh;
+  font-size: 11vh;
+  line-height: 11vh;
+  height: 11vh;
 }
 #date {
-  font-size: 5vh;
-  line-height: 5vh;
+  font-size: 4vh;
+  line-height: 4vh;
+  height: 4vh;
+}
+#coat {
+  width: 16vw;
+  position: absolute;
+  left: 2vw;
+  top: 2vw;
+}
+#twitter-container {
+  width: 40vw;
+  height: 90vh;
+  position: absolute;
+  top: 8vh;
+  right: 0px;
+}
+#twitter-title {
+  color: #ffffff;
+  font-size: 3vh;
+  line-height: 3vh;
+  position: absolute;
+  top: 4vh;
+  left: 63vw;
+  margin: 0px;
+}
+#twitter-frame {
+  margin: 0px 2vw 0px 3vw;
+  height: 89vh;
+}
+#twitter-widget-0 {
+  transform: scale(1.25);
+  transform-origin: 0 0;
+} 
+#meme {
+  background-color: #ff0000;
+  height: 42vh;
+  width: 10px;
+  margin: 0px;
+  margin-left: 20vw;
 }

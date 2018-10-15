@@ -2,20 +2,26 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles.css">
-    <title>Barnaby's Sixth Form Ticker</title>
+    <title>St Cuthbert's Society Ticker</title>
   </head>
-  <div id="clock">
-    <span id="time"></span>
-    <br>
-    <span id="date">The time is loading...</span>
-  </div>
-  <span id="sportsfeed"></span>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="js/jquery.1.11.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.js" ></script>
-  <script src="js/clock.js" ></script>
-  <script>
-    $( "#sportsfeed" ).load( "https://www.reigategrammarsport.org/Default.asp a.Link" );
-    $( "#sportsfeed" ).load( "https://api.twitch.tv/kraken/streams/rewindrl?client_id=5j0r5b7qb7kro03fvka3o8kbq262wwm a.Link" );
-  </script>
+  <body>
+    <!-- <div id="meme"></div> -->
+    <img src="img/coatofarms.svg" id="coat">
+    <div id="clock">
+      <span class="welcome">Welcome to</span>
+      <span class="welcome" id="name">St Cuthbert's Society</span>
+      <span id="time"></span>
+      <span id="date">The time is loading...</span>
+    </div>
+    <p id="twitter-title">Tweets from @cuthsjcr</p>
+    <div id="twitter-container">
+      <div id="twitter-frame">
+        <a class="twitter-timeline" data-lang="en" data-dnt="true" data-theme="dark" data-height="80%" data-width="80%" data-chrome="nofooter noborders noheader noscrollbar" data-link-color="#006600" href="https://twitter.com/cuthsjcr">Twitter feed loading...</a>
+      </div>
+    </div>
+    <script src="js/jquery.1.11.1.js"></script>
+    <script src="js/moment.js" ></script>
+    <script src="js/clock.js" ></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </body>
 </html>
