@@ -54,10 +54,13 @@ function process(spreadsheetdata) {
 }
 function displayInfo() {
     for (var i = rows.length-1; i >= 0; i--) {
-        rows[i];
         day = moment(rows[i][2]).day()-1;
         time = [rows[i][3], rows[i][4]];
         sessionLength = (time[1]-time[0]);
+        if (sessionLength <= 0) {
+            continue;
+        }
+        
         tableID = '#'+day.toString()+'-'
         for (var j = 1; j < sessionLength; j++) {
             $(tableID+(j+time[0])).hide();

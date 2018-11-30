@@ -6,6 +6,6 @@ body {
     width: 100%;
     box-shadow: 0px 0px 40px -10px #000;
 }
-.timetable-space {
-    background-color: #333;
+#timetable-header th {
+    text-align: center;
 }
