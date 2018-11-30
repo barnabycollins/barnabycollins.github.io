@@ -9,3 +9,7 @@ body {
 #timetable-header th {
     text-align: center;
 }
+#form-frame {
+    height: 0px;
+    transition: height 1s ease;
+}

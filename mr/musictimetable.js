@@ -60,7 +60,7 @@ function displayInfo() {
         if (sessionLength <= 0) {
             continue;
         }
-        
+
         tableID = '#'+day.toString()+'-'
         for (var j = 1; j < sessionLength; j++) {
             $(tableID+(j+time[0])).hide();
@@ -71,5 +71,7 @@ function displayInfo() {
         $(tableID).css('background-color', '#005500');
         $(tableID).html(rows[i][1]);
     }
+    $('#form-frame').show();
+    $('#form-frame').css('height', '1500px');
 }
 updateTable();
