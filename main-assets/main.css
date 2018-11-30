@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0px;
+    overflow-x: hidden;
 }
 #content {
     text-align: center;
@@ -31,7 +32,6 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    overflow: hidden;
 }
 h1, h2 {
     margin: 0px;
@@ -71,4 +71,10 @@ h1 {
     #intro-container {
         margin-left: 50vw;
     }
+}
+.container {
+    width: 100%;
+    padding: 0px;
+    margin: 0px auto;
+    max-width: 1100px;
 }
