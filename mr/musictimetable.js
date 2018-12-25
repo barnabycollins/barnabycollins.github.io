@@ -2,26 +2,40 @@ function updateTable() {
     var ss_id = "1ahUx8eR7WGad9xp52JUnvg8BQRwe0tFZckj3ZV_YyNU";
     var url = "https://spreadsheets.google.com/feeds/cells/" + ss_id + "/2/public/full?alt=json&min-row=2";
         $.getJSON(url,  function (data) {
-        process(data.feed.entry);
+            process(data.feed.entry);
     });
     setTimeout(updateTable, 3600000);
 }
 
 function process(spreadsheetdata) {
     // add table inside #timetable-container with header row and initial box
-    $('#timetable-container').html("<table id='timetable' class='table table-striped'><tr id='timetable-header'><td></td></tr></table>");
+    $('#timetable-container').html("<table id='timetable' class='table table-dark table-striped'><tr id='timetable-header'><td class='time-header'></td></tr></table>");
 
     // build table with cells for each time slot
     days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
     today = moment().isoWeekday()-1;
+    indexes = []
+    for (var i = 0; i < 7; i++) {
+        indexes.push((i+today)%7);
+    }
 
     for (var i = 0; i < 7; i++) {
-        $('#timetable-header').append("<th>"+days[(i+today)%7]+"</th>");
+        if (indexes[i] == 0) {
+            $('#timetable-header').append("<th class='mon-col'>"+days[indexes[i]]+"</th>");
+        }
+        else {
+            $('#timetable-header').append("<th>"+days[indexes[i]]+"</th>");
+        }
     }
     for (var j = 10; j < 22; j++) {
-        $('#timetable').append("<tr id='"+j+"'><th>"+j+":00</th></tr>");
+        $('#timetable').append("<tr id='"+j+"'><th class='time-header'>"+j+":00</th></tr>");
         for (var i = 0; i < 7; i++) {
-            $('#'+j).append("<td id='"+i+"-"+j+"'></td>")
+            if (indexes[i] == 0) {
+                $('#'+j).append("<td id='"+indexes[i]+"-"+j+"' class='mon-col'></td>")
+            }
+            else {
+                $('#'+j).append("<td id='"+indexes[i]+"-"+j+"'></td>")
+            }
         }
     }
 
@@ -85,8 +99,7 @@ function displayInfo() {
     clashList = [];
     for (var i = rows.length-1; i >= 0; i--) {
         // load information from rows and place required data into variables
-        console.log(moment(rows[i][2]), moment());
-        day = moment(rows[i][2]).dayOfYear() - moment().dayOfYear();
+        day = moment(rows[i][2]).isoWeekday() - 1;
         time = [rows[i][3], rows[i][4]];
         sessionLength = (time[1]-time[0]);
         clashes = false;
@@ -106,7 +119,7 @@ function displayInfo() {
             else {
                 // stop iterating and set clashes true if booking clashes with another booking
                 clashes = true;
-                clashList.push([rows[i][1], rows[i][3], rows[i][4], days[day+today]]);
+                clashList.push([rows[i][1], rows[i][3], rows[i][4], days[day]]);
                 break;
             }
         }
@@ -139,9 +152,15 @@ function displayInfo() {
         }
         $('#clashes-content').show();
     }
+    $("#loading-screen").css("opacity", "0");
+    setTimeout(hideLoad, 1000);
     // silly animations for after the page is fully loaded to reduce pop-in
 /*     $('#form-frame').show();
     $('#form-frame').css('height', '1500px'); */
+}
+
+function hideLoad() {
+    $("#loading-screen").remove();
 }
 // define function for sorting bookings by date booking was made (to determine priority)
 var sortByDates = function(row1, row2) {
