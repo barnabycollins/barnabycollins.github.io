@@ -60,7 +60,12 @@ function process(spreadsheetdata) {
         }
         // parse date and time into a JS Date if a time column
         else if (cell.gs$cell.col == 1) {
-            data = moment(cell.content.$t, 'DD/MM/YYYY HH:mm:SS').toDate();
+            if (cell.content.$t == 'REPEATED' || cell.content.$t == 'DISABLED') {
+                data = cell.content.$t;
+            }
+            else {
+                data = moment(cell.content.$t, 'DD/MM/YYYY HH:mm:SS').toDate();
+            }
         }
         // process times, filtering out unreasonable times
         else if (cell.gs$cell.col == 4 || cell.gs$cell.col == 5) {
@@ -105,7 +110,7 @@ function displayInfo() {
         clashes = false;
 
         // skip entries with negative length (ie end time before start time)
-        if (sessionLength <= 0 ) {
+        if (sessionLength <= 0 || rows[i][0] == 'DISABLED') {
             continue;
         }
         
@@ -142,7 +147,12 @@ function displayInfo() {
         // extend cell marking start of booking to fill empty space left by other cells
         $(tableID).attr('rowspan', sessionLength.toString());
         // change background and fill cell with booker
-        $(tableID).css('background-color', '#005500');
+        if (rows[i][0] == 'REPEATED') {
+            $(tableID).css('background-color', '#444444');
+        }
+        else {
+            $(tableID).css('background-color', '#005500');
+        }
         $(tableID).html(rows[i][1]);
     }
     if (clashList.length > 0) {
@@ -164,6 +174,8 @@ function hideLoad() {
 }
 // define function for sorting bookings by date booking was made (to determine priority)
 var sortByDates = function(row1, row2) {
+    if (row1[1] == 'REPEATED') return -1;
+    if (row2[1] == 'REPEATED') return 1;
     if (row1[1] > row2[1]) return 1;
     if (row1[1] < row2[1]) return -1;
     return 0;
