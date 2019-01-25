@@ -100,30 +100,30 @@
 }
 
 #showcase-1 .slice {
-  background-color: #00ff00;
+  background-color: #f445c9;
 }
 
 #showcase-1 .slice:before {
-  background-color: #00ff00;
-  -webkit-box-shadow: 0px 0px 0px 1px #00ff00;
-          box-shadow: 0px 0px 0px 1px #00ff00;
+  background-color: #f445c9;
+  -webkit-box-shadow: 0px 0px 0px 1px #f445c9;
+          box-shadow: 0px 0px 0px 1px #f445c9;
 }
 
 #showcase-1 .slice-cover {
-  background-color: #00ff00;
+  background-color: #f445c9;
 }
 
 #showcase-2 .slice {
-  background-color: #ff0000;
+  background-color: #242f39;
 }
 
 #showcase-2 .slice:before {
-  background-color: #ff0000;
-  -webkit-box-shadow: 0px 0px 0px 1px #ff0000;
-          box-shadow: 0px 0px 0px 1px #ff0000;
+  background-color: #242f39;
+  -webkit-box-shadow: 0px 0px 0px 1px #242f39;
+          box-shadow: 0px 0px 0px 1px #242f39;
 }
 
 #showcase-2 .slice-cover {
-  background-color: #ff0000;
+  background-color: #242f39;
 }
 /*# sourceMappingURL=index.css.map */
