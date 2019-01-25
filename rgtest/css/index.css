@@ -1,0 +1,50 @@
+.showcase-row {
+    margin: 3% 0px;
+}
+.showcase-row, .showcase-row * {
+    position: relative;
+}
+.showcase-row .container {
+    height: 315px;
+}
+.slice {
+    height: 100%;
+    background-color: #00ff00;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.slice:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+.slice-right {
+    left: calc((100vw - 1000px)/2 + 560px);
+    right: 0;
+    padding-right: calc((100vw - 1000px)/2);
+}
+.slice-left {
+    right: calc((100vw - 1000px)/2 + 560px);
+    left: 0;
+    padding-left: calc((100vw - 1000px)/2);
+}
+.slice-right:before {
+    transform-origin: bottom right;
+    transform: skewX(10deg);
+    background-color: #00ff00;
+}
+.slice-left:before {
+    transform-origin: bottom left;
+    transform: skewX(-10deg);
+    background-color: #00ff00;
+}
+.showcase-row-l .container {
+    display: flex;
+    justify-content: flex-end;
+}

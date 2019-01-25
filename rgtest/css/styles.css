@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+    background-color: #444;
+    color: #ffffff;
+    text-align: justify;
+    font-family: sans-serif;
+}
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0px auto;
+    border: 1px solid #000000;
+}
+#nav-icon {
+    width: 50px;
+    height: 50px;
+    padding: 1%;
+}
+#navbar {
+    padding-bottom: 3%;
+}
+#header .container {
+    height: 200px;
+    text-align: center;
+}
