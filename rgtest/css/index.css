@@ -16,13 +16,11 @@
   position: absolute;
   top: 10px;
   bottom: 10px;
-  background-color: #00ff00;
   width: calc((100% - 1000px)/2);
 }
 
 .slice {
   height: 100%;
-  background-color: #00ff00;
   display: block;
   position: absolute;
   top: 0;
@@ -43,8 +41,6 @@
   right: 0;
   outline: 5px solid #ffffff;
   outline-offset: -10px;
-  -webkit-box-shadow: 0px 0px 0px 1px #00ff00;
-          box-shadow: 0px 0px 0px 1px #00ff00;
 }
 
 .showcase-row-l .container {
@@ -67,7 +63,6 @@
           transform-origin: bottom right;
   -webkit-transform: skewX(-10deg);
           transform: skewX(-10deg);
-  background-color: #00ff00;
 }
 
 .showcase-row-l .slice-cover {
@@ -96,12 +91,39 @@
           transform-origin: bottom left;
   -webkit-transform: skewX(10deg);
           transform: skewX(10deg);
-  background-color: #00ff00;
 }
 
 .showcase-row-r .slice-cover {
   right: 0;
   -webkit-box-shadow: 5px 0px 0px 5px #ffffff;
           box-shadow: 5px 0px 0px 5px #ffffff;
+}
+
+#showcase-1 .slice {
+  background-color: #00ff00;
+}
+
+#showcase-1 .slice:before {
+  background-color: #00ff00;
+  -webkit-box-shadow: 0px 0px 0px 1px #00ff00;
+          box-shadow: 0px 0px 0px 1px #00ff00;
+}
+
+#showcase-1 .slice-cover {
+  background-color: #00ff00;
+}
+
+#showcase-2 .slice {
+  background-color: #ff0000;
+}
+
+#showcase-2 .slice:before {
+  background-color: #ff0000;
+  -webkit-box-shadow: 0px 0px 0px 1px #ff0000;
+          box-shadow: 0px 0px 0px 1px #ff0000;
+}
+
+#showcase-2 .slice-cover {
+  background-color: #ff0000;
 }
 /*# sourceMappingURL=index.css.map */
