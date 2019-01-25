@@ -1,50 +1,78 @@
 .showcase-row {
-    margin: 3% 0px;
+  margin: 3% 0px;
+  position: relative;
 }
-.showcase-row, .showcase-row * {
-    position: relative;
+
+.showcase-row * {
+  position: relative;
 }
+
 .showcase-row .container {
-    height: 315px;
+  height: 315px;
 }
+
 .slice {
-    height: 100%;
-    background-color: #00ff00;
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
+  height: 100%;
+  background-color: #00ff00;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
+
 .slice:before {
-    content: " ";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
 }
-.slice-right {
-    left: calc((100% - 1000px)/2 + 560px);
-    right: 0;
-    padding-right: calc((100% - 1000px)/2);
-}
-.slice-left {
-    right: calc((100% - 1000px)/2 + 560px);
-    left: 0;
-    padding-left: calc((100% - 1000px)/2);
-}
-.slice-right:before {
-    transform-origin: bottom left;
-    transform: skewX(10deg);
-    background-color: #00ff00;
-}
-.slice-left:before {
-    transform-origin: bottom right;
-    transform: skewX(-10deg);
-    background-color: #00ff00;
-}
+
 .showcase-row-l .container {
-    display: flex;
-    justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
+
+.showcase-row-l .slice {
+  right: calc((100% - 1000px)/2 + 560px);
+  left: 0;
+  padding-left: calc((100% - 1000px)/2);
+}
+
+.showcase-row-l .slice:before {
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transform: skewX(-10deg);
+          transform: skewX(-10deg);
+  background-color: #00ff00;
+}
+
+.showcase-row-r .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.showcase-row-r .slice {
+  left: calc((100% - 1000px)/2 + 560px);
+  right: 0;
+  padding-right: calc((100% - 1000px)/2);
+}
+
+.showcase-row-r .slice:before {
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: skewX(10deg);
+          transform: skewX(10deg);
+  background-color: #00ff00;
+}
+/*# sourceMappingURL=index.css.map */
