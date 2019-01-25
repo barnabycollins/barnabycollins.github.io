@@ -25,22 +25,22 @@
     right: 0;
 }
 .slice-right {
-    left: calc((100vw - 1000px)/2 + 560px);
+    left: calc((100% - 1000px)/2 + 560px);
     right: 0;
-    padding-right: calc((100vw - 1000px)/2);
+    padding-right: calc((100% - 1000px)/2);
 }
 .slice-left {
-    right: calc((100vw - 1000px)/2 + 560px);
+    right: calc((100% - 1000px)/2 + 560px);
     left: 0;
-    padding-left: calc((100vw - 1000px)/2);
+    padding-left: calc((100% - 1000px)/2);
 }
 .slice-right:before {
-    transform-origin: bottom right;
+    transform-origin: bottom left;
     transform: skewX(10deg);
     background-color: #00ff00;
 }
 .slice-left:before {
-    transform-origin: bottom left;
+    transform-origin: bottom right;
     transform: skewX(-10deg);
     background-color: #00ff00;
 }
