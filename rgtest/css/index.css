@@ -1,6 +1,7 @@
 .showcase-row {
   margin: 3% 0px;
   position: relative;
+  overflow: hidden;
 }
 
 .showcase-row * {
@@ -9,6 +10,14 @@
 
 .showcase-row .container {
   height: 315px;
+}
+
+.showcase-row .slice-cover {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  background-color: #00ff00;
+  width: calc((100% - 1000px)/2);
 }
 
 .slice {
@@ -20,6 +29,10 @@
   bottom: 0;
 }
 
+.slice .slice-content {
+  padding: 5px;
+}
+
 .slice:before {
   content: " ";
   position: absolute;
@@ -28,6 +41,8 @@
   height: 100%;
   top: 0;
   right: 0;
+  outline: 5px solid #ffffff;
+  outline-offset: -10px;
 }
 
 .showcase-row-l .container {
@@ -53,6 +68,12 @@
   background-color: #00ff00;
 }
 
+.showcase-row-l .slice-cover {
+  left: 0;
+  -webkit-box-shadow: -5px 0px 0px 5px #ffffff;
+          box-shadow: -5px 0px 0px 5px #ffffff;
+}
+
 .showcase-row-r .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,5 +95,11 @@
   -webkit-transform: skewX(10deg);
           transform: skewX(10deg);
   background-color: #00ff00;
+}
+
+.showcase-row-r .slice-cover {
+  right: 0;
+  -webkit-box-shadow: 5px 0px 0px 5px #ffffff;
+          box-shadow: 5px 0px 0px 5px #ffffff;
 }
 /*# sourceMappingURL=index.css.map */

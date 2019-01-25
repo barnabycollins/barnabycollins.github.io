@@ -1,12 +1,20 @@
 .showcase-row {
     margin: 3% 0px;
     position: relative;
+    overflow: hidden;
 
     * {
         position: relative;
     }
     .container {
         height: 315px; 
+    }
+    .slice-cover {
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        background-color: #00ff00;
+        width: calc((100% - 1000px)/2);
     }
 }
 .slice {
@@ -16,6 +24,10 @@
     position: absolute;
     top: 0;
     bottom: 0;
+
+    .slice-content {
+        padding: 5px;
+    }
 }
 .slice:before {
     content: " ";
@@ -25,6 +37,8 @@
     height: 100%;
     top: 0;
     right: 0;
+    outline: 5px solid #ffffff;
+    outline-offset: -10px;
 }
 .showcase-row-l {
     .container {
@@ -41,6 +55,10 @@
         transform: skewX(-10deg);
         background-color: #00ff00;
     }
+    .slice-cover {
+        left: 0;
+        box-shadow: -5px 0px 0px 5px #ffffff;
+    }
 }
 .showcase-row-r {
     .container {
@@ -56,5 +74,9 @@
         transform-origin: bottom left;
         transform: skewX(10deg);
         background-color: #00ff00;
+    }
+    .slice-cover {
+        right: 0;
+        box-shadow: 5px 0px 0px 5px #ffffff;
     }
 }
