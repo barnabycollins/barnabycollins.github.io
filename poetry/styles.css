@@ -38,3 +38,20 @@ textarea {
     margin-bottom: 30px;
     width: 100%;
 }
+span {
+    text-align: left;
+    display: block;
+    margin: 5px 0px;
+}
+#haiku-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #00d2ff;
+}
