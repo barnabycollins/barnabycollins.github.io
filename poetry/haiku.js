@@ -1,7 +1,7 @@
 var haikuWords = [["On", "In", "With", "Surrounded by", "Eating", "Examining", "Poking", "Impressing", "Empowering"],
-                    ["cricket", "branch", "river", "dog", "cat", "character from an anime", "cheese", "computer", "body pillow"],
-                    ["floating", "feeding", "imagining", "drifting", "snoozing", "crying", "singing"],
-                    ["westwards", "downstream", "eastwards", "quickly", "smoothly", "emotionally", "slowly", "pensively"]];
+                    ["cricket", "branch", "river", "dog", "cat", "character from an anime", "cheese", "computer", "body pillow", "tree", "willow tree", "panda"],
+                    ["floating", "feeding", "imagining", "drifting", "snoozing", "crying", "singing", "flying", "sinking", "typing"],
+                    ["westwards", "downstream", "eastwards", "quickly", "smoothly", "emotionally", "slowly", "pensively", "serenely", "lazily", "quietly"]];
 
 function chooseWord(n) {
     return haikuWords[n][Math.floor(Math.random()*haikuWords[n].length)];
