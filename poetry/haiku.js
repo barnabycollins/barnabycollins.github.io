@@ -1,7 +1,7 @@
-var haikuWords = [["On", "In", "With", "Surrounded by", "Eating", "Examining", "Poking", "Impressing", "Empowering"],
-                    ["cricket", "branch", "river", "dog", "cat", "character from an anime", "cheese", "computer", "body pillow", "tree", "willow tree", "panda"],
-                    ["floating", "feeding", "imagining", "drifting", "snoozing", "crying", "singing", "flying", "sinking", "typing"],
-                    ["westwards", "downstream", "eastwards", "quickly", "smoothly", "emotionally", "slowly", "pensively", "serenely", "lazily", "quietly"]];
+var haikuWords = [["On", "In", "With", "Surrounded by", "Eating", "Examining", "Poking", "Impressing", "Empowering", "Visiting", "Resurrecting", "Singing to", "Hugging", "Worshipping", "Sniffing", "Squeezing"],
+                    ["cricket", "branch", "river", "dog", "cat", "character from an anime", "cheese", "computer", "body pillow", "tree", "willow tree", "panda", "Shrek mug", "bonsai tree", "cherry blossom", "kimono", "samurai", "bathhouse", "shogun", "zen garden", "rock garden", "weeb"],
+                    ["floating", "feeding", "imagining", "drifting", "snoozing", "crying", "singing", "flying", "sinking", "typing", "fading", "observing", "celebrating", "humming", "hurting", "wobbling", "hiding"],
+                    ["westwards", "downstream", "quickly", "smoothly", "emotionally", "slowly", "pensively", "serenely", "lazily", "quietly", "softly", "begrudgingly", "intensely", "imaginatively", "cautiously", "spiritually", "gracefully"]];
 
 function chooseWord(n) {
     return haikuWords[n][Math.floor(Math.random()*haikuWords[n].length)];
