@@ -10,6 +10,8 @@ body {
     align-items: center;
     margin: 0px;
     overflow-x: hidden;
+    /* HIDE CONTENT OUTSIDE SPLASH */
+    overflow: hidden;
 }
 #content {
     text-align: center;
