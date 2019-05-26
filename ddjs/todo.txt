@@ -1,0 +1,3 @@
+loading screen
+genre dropdown
+style more / less buttons properly
