@@ -4,7 +4,6 @@ $('.dj-music').each((index, elem) => {
 
 function toggleMusic(elem) {
     let musicDiv = $(elem).closest('div.dj-card').find('.dj-music');
-    console.log($(musicDiv).css('margin-top'));
     if (musicDiv.css('margin-top') !== '0px') {
         $(elem).html('Less');
         musicDiv.css('margin-top', '0px');
@@ -20,3 +19,8 @@ function toggleMusic(elem) {
         musicDiv.css('margin-top', '-' + musicDiv.outerHeight() + 'px');
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    $('body').css('overflow-y', 'scroll')
+    $('#load-cover').css('opacity', '0');
+})
