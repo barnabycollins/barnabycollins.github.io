@@ -1,4 +1,5 @@
 /* #464646, #a32691 */
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap&subset=latin-ext");
 body {
   background-color: #666666;
   background: url("assets/cdj.jpg") no-repeat center center fixed;
@@ -6,25 +7,49 @@ body {
   margin: 0px;
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
 }
 
 .navbar {
-  background-color: #464646;
+  background-color: #333333;
   -webkit-box-shadow: 0px 0px 20px -5px #000000;
           box-shadow: 0px 0px 20px -5px #000000;
   height: 70px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .navbar .navbar-brand {
   height: 50px;
 }
 
+h1, h2 {
+  font-family: 'Righteous', cursive;
+  font-style: italic;
+}
+
+#header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 400px;
+}
+
+#header-content h1 {
+  font-size: 80px;
+}
+
 #main-content {
   margin-top: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #555555aa;
+  background-color: #000000aa;
 }
 
 #load-cover {
@@ -58,8 +83,9 @@ body {
 }
 
 .dj-card {
-  background-color: #464646aa;
+  background-color: #222222aa;
   border-radius: 5px;
+  color: #dddddd;
 }
 
 .dj-card .row {
@@ -79,7 +105,7 @@ body {
 .dj-card .genre-list li {
   display: block;
   float: left;
-  background-color: #333;
+  background-color: #111111;
   padding: 0px 8px;
   border-radius: 5px;
   font-style: italic;

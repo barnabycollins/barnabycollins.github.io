@@ -25,7 +25,6 @@ function removeLoad() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    $('body').css('overflow-y', 'scroll');
     $('#load-cover').css('opacity', '0');
     setTimeout(removeLoad, 2000);
 });
