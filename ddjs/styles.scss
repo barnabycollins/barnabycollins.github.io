@@ -85,6 +85,16 @@ body {
         }
     }
 
+    .music-expand {
+        position: relative;
+        width: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: center center;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+    }
+
     .dj-img img {
         width: 100%;
         padding: 10px 0px 10px 10px;

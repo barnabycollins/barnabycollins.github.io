@@ -98,6 +98,21 @@ body {
   padding-right: 10px;
 }
 
+.dj-card .music-expand {
+  position: relative;
+  width: 40px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  cursor: pointer;
+}
+
 .dj-card .dj-img img {
   width: 100%;
   padding: 10px 0px 10px 10px;
