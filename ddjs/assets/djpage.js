@@ -7,6 +7,9 @@ function toggleMusic(elem) {
     console.log($(musicDiv).css('margin-top'));
     if (musicDiv.css('margin-top') !== '0px') {
         musicDiv.css('margin-top', '0px');
+        $('.dj-music').not(musicDiv).each((index, elem) => {
+            $(elem).css('margin-top', '-' + $(elem).outerHeight() + 'px');
+        });
     }
     else {
         musicDiv.css('margin-top', '-' + musicDiv.outerHeight() + 'px');
