@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Durham DJ Society</title>
-        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon"/>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles.css">
         <style>
             @keyframes spinner {
                 0% {
@@ -29,9 +25,86 @@
             #bars {
                 animation: bar-slide .9s ease infinite;
             }
+            #load-cover {
+                position: fixed;
+                background-color: #2b2b2b;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                transition: opacity 2s;
+                z-index: 20;
+            }
+            .white-stroke {
+                fill: rgba(0,0,0,0);
+                stroke-width: 10;
+                stroke: #ffffff;
+            }
+            .white-fill {
+                fill: #ffffff;
+            }
         </style>
+        <title>Durham DJ Society</title>
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <div id="load-cover">
+            <svg width="320" height="400" class="cdj-spinner">
+                <defs>
+                    <mask id="jogmask">
+                        <ellipse cx="160" cy="250" rx="60" ry="60" class="white-stroke" style="stroke-width: 30;"></ellipse>
+                    </mask>
+                    <clipPath id="innerscreen">
+                        <rect width="150" height="80" x="85" y="35" class="white-fill"></rect>
+                    </clipPath>
+                    <clipPath id="screenmask">
+                        <rect width="210" height="50" x="55" y="5"></rect>
+                    </clipPath>
+                    <clipPath id="bodymask">
+                        <rect width="320" height="315" x="0" y="85" class="white-fill"></rect>
+                        <rect width="65" height="85" x="0" y="0" class="white-fill"></rect>
+                        <rect width="65" height="85" x="255" y="0" class="white-fill"></rect>
+                    </clipPath>
+                </defs>
+
+                <!-- body -->
+                <rect width="300" height="320" x="10" y="50" class="white-stroke" clip-path="url(#bodymask)"></rect>
+                <rect width="200" height="60" x="60" y="10" class="white-stroke" clip-path="url(#screenmask)"></rect>
+
+                <!-- screen -->
+                <rect width="160" height="90" x="80" y="30" class="white-stroke"></rect>
+                <g clip-path="url(#innerscreen)">
+                    <g id="bars">
+                        <rect width="2" height="20" x="264" y="65" class="white-fill"></rect>
+                        <rect width="2" height="20" x="229" y="65" class="white-fill"></rect>
+                        <rect width="2" height="20" x="194" y="65" class="white-fill"></rect>
+                        <rect width="2" height="20" x="159" y="65" class="white-fill"></rect>
+                        <rect width="2" height="20" x="124" y="65" class="white-fill"></rect>
+                        <rect width="2" height="20" x="89" y="65" class="white-fill"></rect>
+                    </g>
+                </g>
+                
+                <rect width="2" height="11" x="159" y="55" class="white-fill"></rect>
+                <rect width="2" height="11" x="159" y="84" class="white-fill"></rect>
+
+                <!-- buttons -->
+                <ellipse cx="35" cy="345" rx="10" ry="10" class="white-fill"></ellipse>
+                <ellipse cx="35" cy="320" rx="10" ry="10" class="white-fill"></ellipse>
+                <rect width="10" height="100" x="280" y="255" class="white-fill"></rect>
+                <rect width="20" height="10" x="275" y="300" class="white-fill"></rect>
+
+                <!-- jogwheel -->
+                <ellipse cx="160" cy="250" rx="90" ry="90" class="white-stroke"></ellipse>
+                <ellipse cx="160" cy="250" rx="30" ry="30" class="white-stroke"></ellipse>
+                <ellipse cx="160" cy="250" rx="10" ry="10" class="white-fill"></ellipse>
+                <rect id="spinner" width="10" height="180" x="155" y="160" class="white-fill" mask="url(#jogmask)"></rect>
+            </svg>
+        </div>
         <nav class="navbar navbar-fixed-top">
             <div class="container">
                 <img src="assets/logo.png" class="navbar-brand">
@@ -98,58 +171,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="load-cover">
-            <svg width="320" height="400" class="cdj-spinner">
-                <defs>
-                    <mask id="jogmask">
-                        <ellipse cx="160" cy="250" rx="60" ry="60" class="white-stroke" style="stroke-width: 30;"></ellipse>
-                    </mask>
-                    <clipPath id="innerscreen">
-                        <rect width="150" height="80" x="85" y="35" class="white-fill"></rect>
-                    </clipPath>
-                    <clipPath id="screenmask">
-                        <rect width="210" height="50" x="55" y="5"></rect>
-                    </clipPath>
-                    <clipPath id="bodymask">
-                        <rect width="320" height="315" x="0" y="85" class="white-fill"></rect>
-                        <rect width="65" height="85" x="0" y="0" class="white-fill"></rect>
-                        <rect width="65" height="85" x="255" y="0" class="white-fill"></rect>
-                    </clipPath>
-                </defs>
-
-                <!-- body -->
-                <rect width="300" height="320" x="10" y="50" class="white-stroke" clip-path="url(#bodymask)"></rect>
-                <rect width="200" height="60" x="60" y="10" class="white-stroke" clip-path="url(#screenmask)"></rect>
-
-                <!-- screen -->
-                <rect width="160" height="90" x="80" y="30" class="white-stroke"></rect>
-                <g clip-path="url(#innerscreen)">
-                    <g id="bars">
-                        <rect width="2" height="20" x="264" y="65" class="white-fill"></rect>
-                        <rect width="2" height="20" x="229" y="65" class="white-fill"></rect>
-                        <rect width="2" height="20" x="194" y="65" class="white-fill"></rect>
-                        <rect width="2" height="20" x="159" y="65" class="white-fill"></rect>
-                        <rect width="2" height="20" x="124" y="65" class="white-fill"></rect>
-                        <rect width="2" height="20" x="89" y="65" class="white-fill"></rect>
-                    </g>
-                </g>
-                
-                <rect width="2" height="11" x="159" y="55" class="white-fill"></rect>
-                <rect width="2" height="11" x="159" y="84" class="white-fill"></rect>
-
-                <!-- buttons -->
-                <ellipse cx="35" cy="345" rx="10" ry="10" class="white-fill"></ellipse>
-                <ellipse cx="35" cy="320" rx="10" ry="10" class="white-fill"></ellipse>
-                <rect width="10" height="100" x="280" y="255" class="white-fill"></rect>
-                <rect width="20" height="10" x="275" y="300" class="white-fill"></rect>
-
-                <!-- jogwheel -->
-                <ellipse cx="160" cy="250" rx="90" ry="90" class="white-stroke"></ellipse>
-                <ellipse cx="160" cy="250" rx="30" ry="30" class="white-stroke"></ellipse>
-                <ellipse cx="160" cy="250" rx="10" ry="10" class="white-fill"></ellipse>
-                <rect id="spinner" width="10" height="180" x="155" y="160" class="white-fill" mask="url(#jogmask)"></rect>
-            </svg>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

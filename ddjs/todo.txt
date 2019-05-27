@@ -1,2 +1,2 @@
 genre dropdown
-darker theme
+randomise DJ order
