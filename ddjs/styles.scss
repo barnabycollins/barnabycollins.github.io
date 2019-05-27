@@ -98,8 +98,11 @@ h1, h2 {
         .dj-music {
             margin-top: -100%;
             transition: margin-top ease 0.5s;
-            * {
-                padding: 10px 10px 10px 10px;
+            iframe {
+                width: calc(100% - 20px);
+                border-radius: 5px;
+                margin: 10px 10px 10px 10px;
+                background-color: #333333;
             }
         }
     }

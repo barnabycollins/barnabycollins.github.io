@@ -24,7 +24,10 @@ function removeLoad() {
     $('#load-cover').css('display', 'none');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+window.onload = () => {
     $('#load-cover').css('opacity', '0');
+    $('iframe').each((index, elem) => {
+        $(elem).attr('src', $(elem).attr('source'));
+    });
     setTimeout(removeLoad, 2000);
-});
+};

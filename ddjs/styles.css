@@ -124,7 +124,10 @@ h1, h2 {
   transition: margin-top ease 0.5s;
 }
 
-.dj-card .dj-music-container .dj-music * {
-  padding: 10px 10px 10px 10px;
+.dj-card .dj-music-container .dj-music iframe {
+  width: calc(100% - 20px);
+  border-radius: 5px;
+  margin: 10px 10px 10px 10px;
+  background-color: #333333;
 }
 /*# sourceMappingURL=styles.css.map */
