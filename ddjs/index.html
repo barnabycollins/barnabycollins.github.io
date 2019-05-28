@@ -2,7 +2,7 @@
 <html>
     <head>
         <!-- styling for loading spinner -->
-        <style>@keyframes spinner{0%{transform:rotate(45deg)}100%{transform:rotate(225deg)}}@keyframes bar-slide{0%{transform:translateX(0)}100%{transform:translateX(-35px)}}#spinner{transform-origin:center 62.5%;animation:spinner .9s ease infinite}#bars{animation:bar-slide .9s ease infinite}#load-cover{position:fixed;background-color:#2b2b2b;top:0;left:0;bottom:0;right:0;display:flex;justify-content:center;align-items:center;transition:opacity 2s;z-index:20}.white-stroke{fill:transparent;stroke-width:10;stroke:#fff}.white-fill{fill:#fff}body{overflow-x:hidden}</style>
+        <style>@keyframes spinner{0%{transform:rotate(45deg)}100%{transform:rotate(225deg)}}@keyframes bar-slide{0%{transform:translateX(0)}100%{transform:translateX(-35px)}}#spinner{transform-origin:center 65%;animation:spinner .9s ease infinite}#bars{animation:bar-slide .9s ease infinite}#load-cover{position:fixed;background-color:#2b2b2b;top:0;left:0;bottom:0;right:0;display:flex;justify-content:center;align-items:center;transition:opacity 2s;z-index:20}.white-stroke{fill:transparent;stroke-width:10;stroke:#fff}.white-fill{fill:#fff}body{overflow-x:hidden}</style>
 
         <title>Durham DJ Society</title>
         <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon"/>
@@ -14,52 +14,52 @@
             <svg width="320" height="400" class="cdj-spinner">
                 <defs>
                     <mask id="jogmask">
-                        <ellipse cx="160" cy="250" rx="60" ry="60" class="white-stroke" style="stroke-width: 30;"></ellipse>
+                        <ellipse cx="160" cy="260" rx="60" ry="60" class="white-stroke" style="stroke-width: 30;"></ellipse>
                     </mask>
                     <clipPath id="innerscreen">
-                        <rect width="150" height="80" x="85" y="35" class="white-fill"></rect>
+                        <rect width="150" height="80" x="85" y="45" class="white-fill"></rect>
                     </clipPath>
                     <clipPath id="screenmask">
-                        <rect width="210" height="50" x="55" y="5"></rect>
+                        <rect width="210" height="50" x="55" y="15"></rect>
                     </clipPath>
                     <clipPath id="bodymask">
-                        <rect width="320" height="315" x="0" y="85" class="white-fill"></rect>
-                        <rect width="65" height="85" x="0" y="0" class="white-fill"></rect>
-                        <rect width="65" height="85" x="255" y="0" class="white-fill"></rect>
+                        <rect width="320" height="315" x="0" y="95" class="white-fill"></rect>
+                        <rect width="65" height="85" x="0" y="10" class="white-fill"></rect>
+                        <rect width="65" height="85" x="255" y="10" class="white-fill"></rect>
                     </clipPath>
                 </defs>
 
                 <!-- body -->
-                <rect width="300" height="320" x="10" y="50" class="white-stroke" clip-path="url(#bodymask)"></rect>
-                <rect width="200" height="60" x="60" y="10" class="white-stroke" clip-path="url(#screenmask)"></rect>
+                <rect width="300" height="320" x="10" y="60" class="white-stroke" clip-path="url(#bodymask)"></rect>
+                <rect width="200" height="60" x="60" y="20" class="white-stroke" clip-path="url(#screenmask)"></rect>
 
                 <!-- screen -->
-                <rect width="160" height="90" x="80" y="30" class="white-stroke"></rect>
+                <rect width="160" height="90" x="80" y="40" class="white-stroke"></rect>
                 <g clip-path="url(#innerscreen)">
                     <g id="bars">
-                        <rect width="2" height="20" x="264" y="65" class="white-fill"></rect>
-                        <rect width="2" height="20" x="229" y="65" class="white-fill"></rect>
-                        <rect width="2" height="20" x="194" y="65" class="white-fill"></rect>
-                        <rect width="2" height="20" x="159" y="65" class="white-fill"></rect>
-                        <rect width="2" height="20" x="124" y="65" class="white-fill"></rect>
-                        <rect width="2" height="20" x="89" y="65" class="white-fill"></rect>
+                        <rect width="2" height="20" x="264" y="75" class="white-fill"></rect>
+                        <rect width="2" height="20" x="229" y="75" class="white-fill"></rect>
+                        <rect width="2" height="20" x="194" y="75" class="white-fill"></rect>
+                        <rect width="2" height="20" x="159" y="75" class="white-fill"></rect>
+                        <rect width="2" height="20" x="124" y="75" class="white-fill"></rect>
+                        <rect width="2" height="20" x="89" y="75" class="white-fill"></rect>
                     </g>
                 </g>
                 
-                <rect width="2" height="11" x="159" y="55" class="white-fill"></rect>
-                <rect width="2" height="11" x="159" y="84" class="white-fill"></rect>
+                <rect width="2" height="11" x="159" y="65" class="white-fill"></rect>
+                <rect width="2" height="11" x="159" y="94" class="white-fill"></rect>
 
                 <!-- buttons -->
-                <ellipse cx="35" cy="345" rx="10" ry="10" class="white-fill"></ellipse>
-                <ellipse cx="35" cy="320" rx="10" ry="10" class="white-fill"></ellipse>
-                <rect width="10" height="100" x="280" y="255" class="white-fill"></rect>
-                <rect width="20" height="10" x="275" y="300" class="white-fill"></rect>
+                <ellipse cx="35" cy="355" rx="10" ry="10" class="white-fill"></ellipse>
+                <ellipse cx="35" cy="330" rx="10" ry="10" class="white-fill"></ellipse>
+                <rect width="10" height="100" x="280" y="265" class="white-fill"></rect>
+                <rect width="20" height="10" x="275" y="310" class="white-fill"></rect>
 
                 <!-- jogwheel -->
-                <ellipse cx="160" cy="250" rx="90" ry="90" class="white-stroke"></ellipse>
-                <ellipse cx="160" cy="250" rx="30" ry="30" class="white-stroke"></ellipse>
-                <ellipse cx="160" cy="250" rx="10" ry="10" class="white-fill"></ellipse>
-                <rect id="spinner" width="10" height="180" x="155" y="160" class="white-fill" mask="url(#jogmask)"></rect>
+                <ellipse cx="160" cy="260" rx="90" ry="90" class="white-stroke"></ellipse>
+                <ellipse cx="160" cy="260" rx="30" ry="30" class="white-stroke"></ellipse>
+                <ellipse cx="160" cy="260" rx="10" ry="10" class="white-fill"></ellipse>
+                <rect id="spinner" width="10" height="180" x="155" y="170" class="white-fill" mask="url(#jogmask)"></rect>
             </svg>
         </div>
         <nav class="navbar navbar-fixed-top">
@@ -95,6 +95,8 @@
                     </div>
                     <div class="dj-music-container">
                         <div class="dj-music">
+                            <!-- NOTE: to help optimise load times, please change src attributes to 'source=...'.
+                                These will be substituted once the page is loaded to ensure that more important content can be shown ASAP. -->
                             <iframe height="140" scrolling="no" frameborder="no" allow="autoplay" source="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/253565889&color=%23a32691&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">Loading...</iframe>
                             <iframe height="140" scrolling="no" frameborder="no" allow="autoplay" source="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/253565840&color=%23a32691&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">Loading...</iframe>
                         </div>
@@ -123,6 +125,8 @@
                     </div>
                     <div class="dj-music-container">
                         <div class="dj-music">
+                            <!-- NOTE: to help optimise load times, please change src attributes to 'source=...'.
+                                These will be substituted once the page is loaded to ensure that more important content can be shown ASAP. -->
                             <iframe height="120" source="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FDJVadim%2Frumble-inna-mi-jungle%2F" frameborder="0" ></iframe>
                         </div>
                     </div>
