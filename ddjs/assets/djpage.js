@@ -13,6 +13,7 @@ for (let i of djNames) {
         card.find('.genre-list').append('<li>' + j + '</li>')
     }
 
+    let musicDiv = card.find('dj-music');
     for (j of dj.music) {
         if (j[0] == 'mixcloud') {
             card.find('.dj-music').append('<iframe height="120" scrolling="no" frameborder="0" source="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=' + j[1] + '">Loading...</iframe>');
@@ -21,7 +22,7 @@ for (let i of djNames) {
             card.find('.dj-music').append('<iframe height="120" scrolling="no" frameborder="no" allow="autoplay" source="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + j[1] + '&color=%23a32691&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">Loading...</iframe>')
         }
     }
-    card.find('dj-music').css('margin-top', '-' + $(elem).outerHeight() + 'px');
+    musicDiv.css('margin-top', '-' + musicDiv.outerHeight() + 'px');
 }
 
 window.onload = () => {
