@@ -73,7 +73,16 @@
         </div>
         <div id="main-content">
             <div class="container" id="dj-list">
-                <h2>Our DJs</h2>
+                <div class="row">
+                    <div class="col-6 section-header">
+                        <h2>Our DJs</h2>
+                    </div>
+                    <div class="col-6" id="filter-cont">
+                        <select id="genre-filter" onchange="filterGenres(this.value)">
+                            <option value="all">Select genre</option>
+                        </select>
+                    </div>
+                </div>
                 <!-- this will be populated by JS -->
             </div>
         </div>

@@ -1,4 +1,5 @@
 let djNames = shuffle(Object.keys(djs));
+let genres = [];
 let list = $('#dj-list');
 for (let i of djNames) {
     let dj = djs[i];
@@ -10,7 +11,11 @@ for (let i of djNames) {
     card.find('.dj-bio p').html(dj.bio);
 
     for (let j of dj.genres) {
-        card.find('.genre-list').append('<li>' + j + '</li>')
+        card.find('.genre-list').append('<li onclick="filterGenres(this.innerText)">' + j + '</li>')
+        if (!genres.includes(j)) {
+            genres.push(j);
+            $('#genre-filter').append('<option value="' + j + '">' + j + '</select>')
+        }
     }
 
     let musicDiv = card.find('dj-music');
@@ -52,6 +57,26 @@ function toggleMusic(elem) {
     else {
         musicDiv.css('margin-top', '-' + musicDiv.outerHeight() + 'px');
         $(elem).css('transform', 'translateY(-50%) rotate(0deg)');
+    }
+}
+
+function filterGenres(value) {
+    $('#genre-filter').val(value);
+    if (value === 'all') {
+        for (let i of djNames) {
+            djs[i].card.show();
+        }
+    }
+    else {
+        for (let i of djNames) {
+            let dj = djs[i];
+            if (!dj.genres.includes(value)) {
+                dj.card.hide();
+            }
+            else {
+                dj.card.show();
+            }
+        }
     }
 }
 

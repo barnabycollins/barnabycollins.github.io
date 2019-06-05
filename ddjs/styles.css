@@ -26,6 +26,7 @@ body {
 h1, h2 {
   font-family: 'Righteous', sans-serif;
   font-style: italic;
+  margin: 0px;
 }
 
 #header-content {
@@ -49,11 +50,34 @@ h1, h2 {
   margin-top: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #000000aa;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#filter-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#filter-cont #genre-filter {
+  padding: 5px;
+  border: none;
+  margin: 0px;
+  background-color: #555555;
+  color: #ffffff;
+  width: 150px;
+  height: 30px;
+  border-radius: 3px;
 }
 
 .dj-card {
-  background-color: #222222aa;
+  background-color: rgba(34, 34, 34, 0.6);
   border-radius: 5px;
   color: #dddddd;
 }
@@ -82,6 +106,11 @@ h1, h2 {
   color: #aaaaaa;
   margin-right: 10px;
   margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.dj-card .genre-list li:hover {
+  color: #cccccc;
 }
 
 .dj-card .dj-content {
