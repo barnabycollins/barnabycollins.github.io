@@ -38,10 +38,17 @@ window.onload = () => {
     setTimeout(removeLoad, 1000);
 };
 
+/**
+ * Remove the CDJ loading screen after it fades out
+ */
 function removeLoad() {
     $('#load-cover').css('display', 'none');
 }
 
+/**
+ * Toggle the music panel for the DJ to whom the given toggler belongs
+ * @param {object} elem the toggler element triggering the function
+ */
 function toggleMusic(elem) {
     let musicDiv = $(elem).closest('div.dj-card').find('.dj-music');
     if (musicDiv.css('margin-top') !== '0px') {
@@ -60,6 +67,10 @@ function toggleMusic(elem) {
     }
 }
 
+/**
+ * filter DJs by the given genre
+ * @param {string} value the genre to filter DJs by (as written in the genre lists)
+ */
 function filterGenres(value) {
     $('#genre-filter').val(value);
     if (value === 'all') {
