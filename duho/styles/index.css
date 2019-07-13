@@ -1450,7 +1450,7 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.5rem 100px;
+  padding: 0.5rem 1rem;
 }
 
 .navbar > .container,
@@ -1472,7 +1472,7 @@ template {
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
-  margin-right: 100px;
+  margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
