@@ -2706,7 +2706,7 @@ body {
 }
 
 .content-frame:first-of-type {
-  margin-top: 300px;
+  margin-top: 400px;
 }
 
 footer {
@@ -2743,6 +2743,10 @@ footer .logo-flex {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+footer .logo-flex a {
+  width: 80%;
 }
 
 #join button {
