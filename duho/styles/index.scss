@@ -1,0 +1,31 @@
+@import "./main";
+
+#join {
+    button {
+        width: 100%;
+    }
+}
+
+#exec {
+    hr {
+        border: 1px #dddddd solid;
+        width: 90%;
+        margin: 4% 5%;
+    }
+    .name-cont {
+        text-align: left;
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+    .row img {
+        margin: 10px 0px;
+        width: 100%;
+        border-radius: 50%;
+    }
+    ul {
+        list-style: none;
+        padding-left: 5px;
+        margin: 0px;
+    }
+}
