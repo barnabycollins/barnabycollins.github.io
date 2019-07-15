@@ -65,7 +65,7 @@
         
         <link rel="stylesheet" href="styles/index.css">
     </head>
-    <body id="home" data-spy="scroll" data-target="#nav-main" data-offset="0">
+    <body id="home">
         <nav class="navbar navbar-dark navbar-expand justify-content-end">
             <div class="container">
                 <a class="navbar-brand" href="#home"><img src="img/DUHO_textured.png" alt="Hill Orchestra Logo" id="nav-logo"></a>
@@ -83,7 +83,8 @@
             </div>
         </nav>
 
-        <div class="content-frame" id="about">
+        <div class="content-frame" id="about-box">
+            <div class="scroll-anchor" id="about"></div>
             <div class="container">
                 <h1>Durham University Hill Orchestra</h1>
                 <p>Durham University Hill Orchestra is one of the main orchestras at Durham University. It is unique in terms of its total inclusivity – the orchestra is completely non-auditioned and welcomes orchestral players of any level and experience. DUHO enjoys a relaxed and friendly approach to tackling exciting concert repertoire, ranging from classic film scores such as The Empire Strikes Back, E.T. and The Lord of the Rings to orchestral greats, including Schubert’s ‘Unfinished’ Symphony and Sibelius’ Finlandia.</p>
@@ -91,15 +92,18 @@
             </div>
         </div>
 
-        <div class="content-frame" id="welcome">
+        <div class="content-frame" id="welcome-box">
+            <div class="scroll-anchor" id="welcome"></div>
             <div class="container">
                 <h2>President's Welcome</h2>
+                <img src="img/DUHO_texturedOnGrey.png">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et ultricies leo. Sed id laoreet ante. Aliquam nulla erat, eleifend vel velit euismod, imperdiet feugiat tortor. Nullam porttitor at lectus id finibus. Nam ac ipsum quis ex ultrices mattis eget ut enim. Phasellus non quam sed diam suscipit blandit. Nunc pretium mollis tempus. Praesent tortor nunc, pretium et imperdiet eget, bibendum sollicitudin tellus. Sed imperdiet lorem sed placerat tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla facilisi.</p>
                 <p>Sed iaculis justo tincidunt est iaculis, sit amet ullamcorper diam commodo. Nulla neque massa, ultricies in maximus vitae, varius id odio. Sed at nibh molestie, fringilla nisl eget, ultricies ligula. Etiam interdum at nulla at congue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent gravida tempus augue. Aliquam ac odio tristique, vehicula lacus suscipit, fringilla sapien. Vestibulum sed pellentesque mauris. Quisque est erat, lobortis eu urna vel, finibus varius felis.</p>
             </div> 
         </div>
 
-        <div class="content-frame" id="exec">
+        <div class="content-frame" id="exec-box">
+            <div class="scroll-anchor" id="exec"></div>
             <div class="container">
                 <h2>Our Exec</h2>
                 <div class="row">
@@ -230,18 +234,13 @@
             </div>
         </div>
 
-        <div class="content-frame" id="join">
+        <div class="content-frame" id="join-box">
+            <div class="scroll-anchor" id="join"></div>
             <div class="container">
                 <h2>Join Us</h2>
-                <div class="row">
-                    <div class="col-md-10">
-                        <p>Membership of The Hill Orchestra is open to any member of Durham University and costs just £12 per year. Being a member has many perks, such as discounted Hill Orchestra merchandise, biscuits at rehearsals, and recognition of your hard work through inclusion in the concert programmes.</p>
-                        <p>Alternatively, if you have any questions, feel free to contact us at <a href="mailto:hill.orchestra.society@durham.ac.uk">the society email address</a>.</p>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-outline-primary btn-lg text-center">Join</button>
-                    </div>
-                </div>
+                <button class="btn btn-outline-primary btn-lg text-center">Join</button>
+                <p>Membership of The Hill Orchestra is open to any member of Durham University and costs just £12 per year. Being a member has many perks, such as discounted Hill Orchestra merchandise, biscuits at rehearsals, and recognition of your hard work through inclusion in the concert programmes.</p>
+                <p>Alternatively, if you have any questions, feel free to contact us at <a href="mailto:hill.orchestra.society@durham.ac.uk">the society email address</a>.</p>
             </div>
         </div>
         
@@ -268,5 +267,6 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="js/scrolling.js"></script>
     </body>
 </html>

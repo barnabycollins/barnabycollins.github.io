@@ -1,12 +1,29 @@
 @import "./main";
 
-#join {
+#join-box {
     button {
-        width: 100%;
+        float: right;
+        margin: 8px 0px 10px 10px;
+        width: 150px;
+    }
+    p {
+        margin-top: 0px;
     }
 }
 
-#exec {
+#welcome-box {
+    img {
+        float: right;
+        margin: 8px 0px 10px 10px;
+        width: 140px;
+        border-radius: 50%;
+    }
+    p {
+        margin-top: 0px;
+    }
+}
+
+#exec-box {
     hr {
         border: 1px #dddddd solid;
         width: 90%;

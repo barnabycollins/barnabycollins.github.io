@@ -2667,8 +2667,10 @@ input[type="button"].btn-block {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  -webkit-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
   z-index: 1000;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -2700,6 +2702,7 @@ body {
 }
 
 .content-frame {
+  position: relative;
   margin-bottom: 100px;
   background-color: rgba(66, 66, 66, 0.9);
   padding: 2% 0px;
@@ -2707,6 +2710,12 @@ body {
 
 .content-frame:first-of-type {
   margin-top: 400px;
+}
+
+.scroll-anchor {
+  position: absolute;
+  top: -196px;
+  left: 0;
 }
 
 footer {

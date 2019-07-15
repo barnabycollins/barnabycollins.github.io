@@ -25,6 +25,7 @@ body {
     background-position: center center;
 }
 .content-frame {
+    position: relative;
     margin-bottom: 100px;
     background-color: rgba(66, 66, 66, 0.9);
     padding: 2% 0px;
@@ -32,6 +33,13 @@ body {
         margin-top: 400px;
     }
 }
+
+.scroll-anchor {
+    position: absolute;
+    top: -196px;
+    left: 0;
+}
+
 footer {
     padding-top: 2%;
     background-color: rgb(66, 66, 66);

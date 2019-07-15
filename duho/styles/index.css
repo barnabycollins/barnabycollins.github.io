@@ -2667,8 +2667,10 @@ input[type="button"].btn-block {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  -webkit-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
   z-index: 1000;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -2700,6 +2702,7 @@ body {
 }
 
 .content-frame {
+  position: relative;
   margin-bottom: 100px;
   background-color: rgba(66, 66, 66, 0.9);
   padding: 2% 0px;
@@ -2707,6 +2710,12 @@ body {
 
 .content-frame:first-of-type {
   margin-top: 400px;
+}
+
+.scroll-anchor {
+  position: absolute;
+  top: -196px;
+  left: 0;
 }
 
 footer {
@@ -2749,17 +2758,34 @@ footer .logo-flex a {
   width: 80%;
 }
 
-#join button {
-  width: 100%;
+#join-box button {
+  float: right;
+  margin: 8px 0px 10px 10px;
+  width: 150px;
 }
 
-#exec hr {
+#join-box p {
+  margin-top: 0px;
+}
+
+#welcome-box img {
+  float: right;
+  margin: 8px 0px 10px 10px;
+  width: 140px;
+  border-radius: 50%;
+}
+
+#welcome-box p {
+  margin-top: 0px;
+}
+
+#exec-box hr {
   border: 1px #dddddd solid;
   width: 90%;
   margin: 4% 5%;
 }
 
-#exec .name-cont {
+#exec-box .name-cont {
   text-align: left;
   height: 60px;
   display: -webkit-box;
@@ -2770,13 +2796,13 @@ footer .logo-flex a {
           align-items: center;
 }
 
-#exec .row img {
+#exec-box .row img {
   margin: 10px 0px;
   width: 100%;
   border-radius: 50%;
 }
 
-#exec ul {
+#exec-box ul {
   list-style: none;
   padding-left: 5px;
   margin: 0px;
