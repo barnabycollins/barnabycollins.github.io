@@ -1,4 +1,0 @@
-conductor section?
-emails
-fix mobile
-make navbar responsive
