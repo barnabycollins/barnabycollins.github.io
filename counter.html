@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+        body {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0px;
+        }
+        #countDiv {
+            position: absolute;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%, -50%);
+            font-size: 8vw;
+            width: 100%;
+            text-align: center;
+        }
+        #elapsedDiv {
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+            font-size: 3vw;
+            width: 100%;
+            text-align: center;
+        }
+        #options {
+            position: absolute;
+            left: 50%;
+            top: 80%;
+            transform: translate(-50%, -50%);
+            font-size: 3vw;
+            width: 100%;
+            text-align: center;
+        }
+        #num {
+            font-size: 3vw;
+        }
+        #toggle {
+            margin-top: 1vh;
+            font-size: 3vw;
+            padding: 1vh 3vw;
+        }
+        span {
+            font-kerning: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="countDiv">
+        Count: <span id="counter">0.00</span>
+    </div>
+    <div id="elapsedDiv">
+        Elapsed: <span id="secsElapsed">0.00</span>
+    </div>
+    <div id="options">
+        <div>Count per second: <input type="number" id="num" value="2.25"></div>
+        <button id="toggle" onclick="toggleTimer()">Start</button>
+    </div>
+    <script>
+        let start;
+        let interval;
+        const counter = document.getElementById("counter");
+        const elapsed = document.getElementById("secsElapsed");
+        const button = document.getElementById("toggle");
+        let countPerMS = 2.25;
+        let running = false;
+
+        function toggleTimer() {
+            if (!running) {
+                countPerMS = document.getElementById("num").value / 1000;
+                start = new Date().getTime();
+                interval = setInterval(updateCount, 10);
+                button.innerHTML = "Stop";
+            }
+            else {
+                clearInterval(interval);
+                updateCount();
+                button.innerHTML = "Restart";
+            }
+            running = !running;
+        }
+
+        function updateCount(time) {
+            const diff =  new Date().getTime() - start;
+            counter.innerHTML = (diff * countPerMS).toFixed(2);
+            elapsed.innerHTML = (diff / 1000).toFixed(2);
+        }
+    </script>
+</body>
+</html>
