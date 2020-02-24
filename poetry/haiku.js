@@ -1,8 +1,8 @@
 var haikuWords = [
-    ["On", "In", "With", "Surrounded by", "Eating", "Examining", "Poking", "Impressing", "Empowering", "Visiting", "Resurrecting", "Singing to", "Hugging", "Worshipping", "Sniffing", "Squeezing", "Enjoying", "Flipping", "Grabbing", "Lubricating"],
-    ["cricket", "branch", "river", "dog", "cat", "character from an anime", "cheese", "computer", "body pillow", "tree", "willow tree", "panda", "Shrek mug", "bonsai tree", "cherry blossom", "kimono", "samurai", "bathhouse", "shogun", "zen garden", "rock garden", "weeb", "basket", "weasel", "penguin", "bruh moment"],
+    ["On", "In", "With", "Surrounded by", "Eating", "Examining", "Poking", "Impressing", "Empowering", "Visiting", "Resurrecting", "Singing to", "Hugging", "Worshipping", "Sniffing", "Squeezing", "Enjoying", "Flipping", "Grabbing", "Lubricating", "Road rolling"],
+    ["cricket", "branch", "river", "dog", "cat", "character from an anime", "cheese", "computer", "body pillow", "tree", "willow tree", "panda", "Shrek mug", "bonsai tree", "cherry blossom", "kimono", "samurai", "bathhouse", "shogun", "zen garden", "rock garden", "weeb", "basket", "weasel", "penguin", "bruh moment", "cabbage", "za warudo"],
     ["floating", "feeding", "imagining", "drifting", "snoozing", "crying", "singing", "flying", "sinking", "typing", "fading", "observing", "celebrating", "humming", "hurting", "wobbling", "hiding", "sneaking", "eating alone", "contemplating", "sailing"],
-    ["westwards", "downstream", "quickly", "smoothly", "emotionally", "slowly", "pensively", "serenely", "lazily", "quietly", "softly", "begrudgingly", "intensely", "imaginatively", "cautiously", "spiritually", "gracefully", "sloppily", "in a roundabout manner", "hungrily", "clumsily"]
+    ["westwards", "downstream", "quickly", "smoothly", "emotionally", "slowly", "pensively", "serenely", "lazily", "quietly", "softly", "begrudgingly", "intensely", "imaginatively", "cautiously", "spiritually", "gracefully", "sloppily", "in a roundabout manner", "hungrily", "clumsily", "sparingly", "wantonly", "delinquently"]
 ];
 
 function chooseWord(n) {
