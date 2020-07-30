@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  font-size: 18px;
+  text-align: justify;
+}
+
+body .content-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+}
+
+body .content-item#hero {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.8))), url("../img/prebends.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../img/prebends.jpg");
+}
+
+body .content-item#hero .sidebar {
+  border-right: 5px solid #4f9c92;
+}
+
+body .content-item#hero .content-main {
+  color: #ffffff;
+}
+
+body .content-item#hero .content-main p {
+  font-size: 60px;
+  margin: 0;
+}
+
+body .content-item#hero .content-main h1 {
+  font-size: 100px;
+  margin: 0;
+}
+
+body .content-item#about {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(white)), url("../img/colosseum2.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), white), url("../img/colosseum2.jpg");
+}
+
+body .content-item#about .sidebar {
+  border-right: 5px solid #a4daac;
+}
+
+body .content-item.full-height-content {
+  height: 100vh;
+}
+
+body .content-item .sidebar {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0 20px -10px #000000;
+          box-shadow: 0 0 20px -10px #000000;
+}
+
+body .content-item .sidebar .sidebar-item {
+  padding: 10px;
+  width: 35px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+}
+
+body .content-item .sidebar .sidebar-item h2 {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  position: relative;
+  margin: 0;
+}
+
+body .content-item .content-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body .content-item .content-main .container {
+  max-width: 960px;
+  margin: auto;
+}
+/*# sourceMappingURL=styles.css.map */

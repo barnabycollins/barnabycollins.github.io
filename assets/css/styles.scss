@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');  
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+
+    font-size: 18px;
+    text-align: justify;
+
+    .content-item {
+        flex: 1;
+        display: flex;
+        
+        background-size: cover;
+        background-position: center;
+
+        &#hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../img/prebends.jpg");
+
+            .sidebar {
+                border-right: 5px solid #4f9c92;
+            }
+
+            .content-main {
+                color: #ffffff;
+                
+                p {
+                    font-size: 60px;
+                    margin: 0;
+                }
+
+                h1 {
+                    font-size: 100px;
+                    margin: 0;
+                }
+            }
+        }
+
+        &#about {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1.0)), url("../img/colosseum2.jpg");
+
+            .sidebar {
+                border-right: 5px solid #a4daac;
+            }
+        }
+
+        &.full-height-content {
+            height: 100vh;
+        }
+    
+        .sidebar {
+            background: #ffffff;
+    
+            display: flex;
+            flex-direction: column;
+
+            box-shadow: 0 0 20px -10px #000000;
+            
+            .sidebar-item {
+                padding: 10px;
+                width: 35px;
+                position: sticky;
+                top: 0;
+                bottom: 0;
+    
+                h2 {
+                    writing-mode: vertical-rl;
+                    transform: rotate(180deg);
+                    position: relative;
+                    margin: 0;
+                }
+            }
+        }
+
+        .content-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex: 1;
+
+            .container {
+                max-width: 960px;
+                margin: auto;
+            }
+        }
+    }
+}
