@@ -30,6 +30,10 @@ jobs:
         with:
             ref: gh-pages
             fetch-depth: 1
+      
+      - name: Delete .gitignore
+        run: |
+          rm .gitignore
 
       - name: Compile CSS from SCSS files
         uses: gha-utilities/sass-build@v0.4.5
