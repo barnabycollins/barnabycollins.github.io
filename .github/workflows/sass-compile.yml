@@ -33,7 +33,7 @@ jobs:
       
       - name: Reset gh-pages to main
         run: |
-          git reset --hard main
+          git reset --hard origin/main
       
       - name: Delete .gitignore
         run: |
