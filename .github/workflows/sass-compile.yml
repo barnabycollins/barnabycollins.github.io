@@ -17,10 +17,6 @@ jobs:
             ref: main
             fetch-depth: 10
             submodules: true
-          
-      - name: Check main
-        run: |
-          echo "${{ github.sha }}"
 
       - name: Checkout new gh-pages branch
         uses: actions/checkout@v2
@@ -28,10 +24,9 @@ jobs:
             ref: gh-pages
             fetch-depth: 1
       
-      - name: Reset gh-pages to main branch
+      - name: Move gh-pages to main branch
         run: |
-          echo "${{ github.sha }}"
-          git reset --hard ${{ github.sha }}
+          git rebase --onto master gh-pages gh-pages
       
       - name: Delete development gitignore
         run: |
