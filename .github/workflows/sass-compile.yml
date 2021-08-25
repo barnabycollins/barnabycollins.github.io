@@ -31,13 +31,13 @@ jobs:
         with:
           branch: 'gh-pages'
 
-      - name: Checkout gh-pages branch
+      - name: Checkout new gh-pages branch
         uses: actions/checkout@v2
         with:
             ref: gh-pages
             fetch-depth: 1
       
-      - name: Delete .gitignore
+      - name: Delete development gitignore
         run: |
           rm .gitignore
 
@@ -47,7 +47,7 @@ jobs:
           source: styles/index.scss
           destination: styles/index.css
 
-      - name: Add and Commit changes to gh-pages branch
+      - name: Add and commit changes to gh-pages branch
         run: |
           git config --local user.email 'action@github.com'
           git config --local user.name 'GitHub Action'
