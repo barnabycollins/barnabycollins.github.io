@@ -26,6 +26,7 @@ jobs:
       
       - name: Move gh-pages to main branch
         run: |
+          git fetch --all
           git rebase --onto main gh-pages gh-pages
       
       - name: Delete development gitignore
