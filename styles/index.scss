@@ -92,14 +92,29 @@ body {
 }
 
 #content {
-    margin-left: 200px;
+    padding-left: $sidebar-width;
 
     > div {
-        //padding: 5% 20%;
-
         h2 {
             font-weight: 300;
             font-size: 50px;
+            margin: 0px;
+        }
+    }
+
+    #welcome {
+        padding: 50vh 20% 10vh 10%;
+
+        background: linear-gradient(#ffffffc0, #ffffffc0, #ffffffff),
+                    url("/img/prebends.jpg");
+        background-size: cover;
+
+        #welcome-box {
+            height: 40vh;
+        }
+
+        p {
+            font-size: 24px;
         }
     }
 }
