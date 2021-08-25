@@ -18,7 +18,7 @@ jobs:
             fetch-depth: 10
             submodules: true
       
-      - name: Create gh-pages branch
+      - name: Create fresh gh-pages branch
         uses: peterjgrainger/action-create-branch@v2.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,10 +31,6 @@ jobs:
             ref: gh-pages
             fetch-depth: 1
       
-      - name: Reset gh-pages to main
-        run: |
-          git reset --hard origin/main
-      
       - name: Delete .gitignore
         run: |
           rm .gitignore
@@ -45,10 +41,15 @@ jobs:
           source: styles/index.scss
           destination: styles/index.css
 
-      - name: Push changes to gh-pages
-        uses: dfm/force-push-branch-action@v1
+      - name: Add and Commit changes to gh-pages branch
+        run: |
+          git config --local user.email 'action@github.com'
+          git config --local user.name 'GitHub Action'
+          git add styles/*
+          git commit -m 'Compile website'
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          target-branch: "gh-pages"
-          commit-message: "Compile website"
-          path: |
-            *
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
