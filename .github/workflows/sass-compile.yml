@@ -26,7 +26,7 @@ jobs:
       
       - name: Reset gh-pages to main branch
         run: |
-          git reset --hard main
+          git reset --hard ${{ env.GITHUB_SHA }}
       
       - name: Delete development gitignore
         run: |
