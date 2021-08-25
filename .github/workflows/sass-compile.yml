@@ -48,7 +48,7 @@ jobs:
       - name: Push changes to gh-pages
         uses: dfm/force-push-branch-action@v1
         with:
-          branch: "gh-pages"
+          target-branch: "gh-pages"
           commit-message: "Compile website"
           path: |
             *
