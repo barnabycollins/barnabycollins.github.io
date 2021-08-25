@@ -20,7 +20,7 @@ jobs:
           
       - name: Check main
         run: |
-          echo "${{ env.GITHUB_SHA }}"
+          echo "${{ github.sha }}"
 
       - name: Checkout new gh-pages branch
         uses: actions/checkout@v2
@@ -30,8 +30,8 @@ jobs:
       
       - name: Reset gh-pages to main branch
         run: |
-          echo "${{ env.GITHUB_SHA }}"
-          git reset --hard ${{ env.GITHUB_SHA }}
+          echo "${{ github.sha }}"
+          git reset --hard ${{ github.sha }}
       
       - name: Delete development gitignore
         run: |
