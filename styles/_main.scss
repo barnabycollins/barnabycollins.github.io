@@ -1,5 +1,9 @@
 @import "../fonts/Source_Sans_Pro/SourceSansPro";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Source Sans Pro", sans-serif;
     margin: 0px;
