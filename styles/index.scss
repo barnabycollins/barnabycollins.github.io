@@ -101,7 +101,7 @@ body {
         h2 {
             font-weight: 300;
             font-size: 50px;
-            margin: 0px;
+            margin: 0px 0px 20px 0px;
         }
     }
 
@@ -123,6 +123,36 @@ body {
 
     #skills {
 
+        #skills-table {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            row-gap: 10px;
+
+            font-size: 24px;
+            
+            .skills-title {
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+            }
+
+            .skills-content {
+                font-size: 22px;
+                font-weight: 300;
+                display: flex;
+                flex-wrap: wrap;
+
+                span {
+                    margin: 3px;
+                    padding: 3px 10px;
+                    
+                    border-radius: 5px;
+
+                    color: #ffffff;
+                    background-color: $base-color;
+                }
+            }
+        }
     }
 }
 

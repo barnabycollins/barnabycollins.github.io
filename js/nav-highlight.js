@@ -1,6 +1,7 @@
 const sectionsToNavs = {
     'welcome': 'welcome-link',
-    'skills': 'skills-link'
+    'skills': 'skills-link',
+    'experience': 'experience-link'
 }
 
 let previouslyFocussed = 'welcome';
@@ -13,7 +14,7 @@ function checkScroll() {
 
     for (let i = 0; i < currentlyFocussed.length; i++) {
         const id = currentlyFocussed[i].id;
-        if (id !== previouslyFocussed && id in sectionsToNavs) {
+        if (id in sectionsToNavs && id !== previouslyFocussed) {
             document.getElementById(sectionsToNavs[previouslyFocussed]).style.fontWeight = 300;
             document.getElementById(sectionsToNavs[id]).style.fontWeight = 400;
             previouslyFocussed = id;
