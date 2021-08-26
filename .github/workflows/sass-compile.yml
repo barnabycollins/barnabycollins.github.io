@@ -44,9 +44,8 @@ jobs:
         run: |
           git config --local user.email 'action@github.com'
           git config --local user.name 'GitHub Actionz'
-          git status
+          ls styles/
           git add styles/*
-          git status
           git commit -m 'Compile website'
 
       - name: Push changes to gh-pages
