@@ -28,11 +28,15 @@ jobs:
         with:
           source: styles/index.scss
           destination: styles/index.css
+      
+      - name: Tidy up surplus Sass files
+        run: |
+          rm -r *.scss
 
       - name: Push changes to gh-pages
         uses: dfm/force-push-branch-action@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           target-branch: "gh-pages"
-          commit-message: "Compile website"
+          commit-message: "Compile stylesheets"
           path: "*"
