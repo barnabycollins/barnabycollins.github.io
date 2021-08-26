@@ -45,8 +45,7 @@ jobs:
           git config --local user.email 'action@github.com'
           git config --local user.name 'GitHub Actionz'
           ls styles/
-          git add *
-          git commit -m 'Compile website'
+          git commit -am 'Compile website'
 
       - name: Push changes to gh-pages
         uses: dfm/force-push-branch-action@v1
