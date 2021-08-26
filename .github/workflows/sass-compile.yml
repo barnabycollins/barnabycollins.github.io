@@ -15,20 +15,9 @@ jobs:
       - name: Checkout source Git branch
         uses: actions/checkout@v2
         with:
-            ref: main
-            fetch-depth: 10
-            submodules: true
-
-      - name: Move gh-pages to main branch
-        run: |
-          git fetch --all
-          git branch -f gh-pages ${{ github.sha }}
-      
-      - name: Checkout moved gh-pages branch
-        uses: actions/checkout@v2
-        with:
-            ref: gh-pages
-            fetch-depth: 10
+          ref: main
+          fetch-depth: 10
+          submodules: true
       
       - name: Delete development gitignore
         run: |
@@ -40,17 +29,10 @@ jobs:
           source: styles/index.scss
           destination: styles/index.css
 
-      - name: Add and commit changes to gh-pages branch
-        run: |
-          git config --local user.email 'action@github.com'
-          git config --local user.name 'GitHub Actionz'
-          ls styles/
-          git commit -am 'Compile website'
-
       - name: Push changes to gh-pages
         uses: dfm/force-push-branch-action@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          branch: "gh-pages"
+          target-branch: "gh-pages"
           commit-message: "Compile website"
           path: "*"
