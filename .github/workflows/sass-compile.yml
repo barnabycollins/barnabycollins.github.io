@@ -31,7 +31,7 @@ jobs:
       
       - name: Tidy up surplus Sass files
         run: |
-          rm -r *.scss
+          find . -name "*.scss" | xargs rm
 
       - name: Push changes to gh-pages
         uses: dfm/force-push-branch-action@v1
