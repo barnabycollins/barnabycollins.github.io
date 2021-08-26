@@ -21,7 +21,7 @@ jobs:
 
       - name: Move gh-pages to main branch
         run: |
-          git fetch -all
+          git fetch --all
           git branch -f gh-pages ${{ github.sha }}
       
       - name: Checkout moved gh-pages branch
