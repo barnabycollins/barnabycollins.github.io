@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      
       - name: Checkout source Git branch
         uses: actions/checkout@v2
         with:
@@ -18,15 +19,16 @@ jobs:
             fetch-depth: 10
             submodules: true
 
-      - name: Checkout new gh-pages branch
+      - name: Move gh-pages to main branch
+        run: |
+          git fetch -all
+          git branch -f gh-pages ${{ github.sha }}
+      
+      - name: Checkout moved gh-pages branch
         uses: actions/checkout@v2
         with:
             ref: gh-pages
             fetch-depth: 10
-      
-      - name: Move gh-pages to main branch
-        run: |
-          git branch -f gh-pages ${{ github.sha }}
       
       - name: Delete development gitignore
         run: |
