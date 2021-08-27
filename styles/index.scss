@@ -154,8 +154,6 @@ $sidebar-width: 300px;
                 span {
                     margin: 3px;
                     padding: 3px 10px;
-                    
-                    border-radius: 5px;
 
                     color: #ffffff;
                     background-color: $base-color;
@@ -172,7 +170,10 @@ $sidebar-width: 300px;
     
             .projects-category {
                 grid-column: 1;
-                background-color: #e8e8e8;
+
+                background-color: #f4f4f4;
+                background-color: $base-color;
+                color: #ffffff;
 
                 h3 {
                     font-size: 24px;
