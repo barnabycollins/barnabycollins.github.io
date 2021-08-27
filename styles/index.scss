@@ -52,7 +52,7 @@ body {
     #sidebar-nav {
         width: 100%;
         text-align: center;
-        padding-top: 30px;
+        padding-top: 25%;
 
         flex-grow: 1;
 
@@ -102,6 +102,14 @@ body {
             font-weight: 300;
             font-size: 50px;
             margin: 0px 0px 20px 0px;
+
+            &:not(#welcome-h2) {
+                position: sticky;
+                top: 0px;
+                padding: 20px 0px;
+                z-index: 20;
+                background-color: #ffffff;
+            }
         }
     }
 
@@ -134,13 +142,18 @@ body {
                 font-weight: 600;
                 display: flex;
                 align-items: center;
+
+                grid-column: 1;
             }
 
             .skills-content {
                 font-size: 22px;
                 font-weight: 300;
+
                 display: flex;
                 flex-wrap: wrap;
+
+                grid-column: 2;
 
                 span {
                     margin: 3px;
@@ -154,6 +167,73 @@ body {
             }
         }
     }
+
+    #projects {
+    
+        #projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+    
+            .projects-category {
+                grid-column: 1;
+                background-color: #f0f0f0;
+
+                h3 {
+                    font-size: 24px;
+                    text-align: center;
+                    
+                    margin: 20px 0px;
+
+                    position: sticky;
+                    top: 120px;
+                }
+            }
+
+            .projects-item {
+                padding: 20px 40px;
+                grid-column: 2;
+
+                background-size: cover;
+                background-position: center;
+
+                a {
+                    font-weight: 600;
+                }
+
+                .project-title {
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+
+                    h4 {
+                        flex-grow: 1;
+
+                        a {
+                            font-size: 28px;
+                            font-weight: 400;
+                        }
+                    }
+
+                    ul {
+                        list-style: none;
+                        font-size: 24px;
+                        margin: 0px;
+
+                        li {
+                            display: inline;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+
+            .projects-separator {
+                grid-column: 1 / span 2;
+                height: 20px;
+            }
+        }
+    }
+    margin-bottom: 10000px;
 }
 
 $fa-font-path: "/fonts/font-awesome/webfonts";

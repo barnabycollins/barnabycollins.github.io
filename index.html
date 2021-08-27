@@ -13,16 +13,18 @@
             <ul>
                 <li id="welcome-link" style="font-weight: 400;"><a href="#welcome">Welcome</a></li>
                 <li id="skills-link"><a href="#skills">Skills</a></li>
+                <li id="projects-link"><a href="#projects">Projects</a></li>
             </ul>
             <script>
                 const sectionsToNavs = {
                     'welcome': 'welcome-link',
-                    'skills': 'skills-link'
+                    'skills': 'skills-link',
+                    'projects': 'projects-link'
                 };
             </script>
         </div>
         <div id="sidebar-bottom">
-            <ul id="sidebar-socials">
+            <ul id="sidebar-socials" class="uses-icon-links">
                 <li>
                     <a href="https://linkedin.com/in/barnaby-collins"><i class="fab fa-linkedin"></i></a>
                 </li>
@@ -35,21 +37,12 @@
     <div id="content">
         <div id="welcome">
             <div id="welcome-box">
-                <h2>Welcome!</h2>
+                <h2 id="welcome-h2">Welcome!</h2>
                 <p>
-                    My name's Barnaby Collins, and I'm a fourth-year Computer
-                    Science student at Durham University. Outside my course,
-                    I participate in a wide range of groups and fill
-                    administrative roles in several executive committees. I
-                    have a wide range of interests and skills, mostly focussed
+                    My name's Barnaby Collins, and I'm a fourth-year Computer Science student at Durham University.
+                    Outside my course, I participate in a wide range of groups and fill administrative roles in
+                    several executive committees. I have a wide range of interests and skills, mostly focussed
                     around music and live events.
-                </p>
-                <p>
-                    The main role I'm occupying this year is that of Senior Tech
-                    Officer at Music Durham, and I'm also shortly commencing
-                    part-time consulting work at Northern Texture, an
-                    up-and-coming house & techno record label in Durham. More
-                    information about all this can be found below!
                 </p>
             </div>
         </div>
@@ -135,6 +128,53 @@
                     <span>Design & Engineering</span>
                     <span>Gaming</span>
                     <span>DIY</span>
+                </div>
+            </div>
+        </div>
+        <div id="projects">
+            <h2>Projects</h2>
+            <div id="projects-grid">
+                <div class="projects-category" style="grid-row: 1 / span 2;">
+                    <h3>Programming</h3>
+                </div>
+                <div class="projects-item" style="background-image: url(img/rocket-league.jpg);">
+                    <div class="project-title">
+                        <h4><a href="https://github.com/rewindrl/updater">Rewind Gaming: Broadcast Overlay Updater</a></h4>
+                        <ul class="uses-icon-links">
+                            <li><a href="https://github.com/rewindrl/updater"><i class="fab fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                    <p>
+                        I originally developed this script for Rewind Gaming as an in-house solution to reduce
+                        broadcasters' workload by allowing a remote moderator to keep on-screen
+                        information up to date. It runs inside an HTML overlay on the broadcast
+                        host computer and automatically updates broadcast graphics with data
+                        from the Google Sheets API.
+                    </p>
+                    <p>
+                        It was open-sourced upon Rewind Gaming's closure and is now in regular
+                        use by a range of entities across the Rocket League scene. The idea of
+                        using Google Sheets as a remote data source also sparked a number of
+                        similar projects from others - such as Grandy's
+                        <a href="https://github.com/GrandyB/SheetsIO">SheetsIO</a>.
+                    </p>
+                </div>
+                <div class="projects-item" style="background-image: url(img/traymaster.jpg);">
+                    <div class="project-title">
+                        <h4><a href="https://github.com/Kacper-Lubisz/TrayMaster">TrayMaster</a></h4>
+                        <ul class="uses-icon-links">
+                            <li><a href="https://www.facebook.com/durhamfoodbank/posts/2924132317645091"><i class="fab fa-facebook"></i></a>
+                            <li><a href="https://github.com/Kacper-Lubisz/TrayMaster"><i class="fab fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                    <p>Yep, stuff time.</p>
+                </div>
+                <div class="projects-separator"></div>
+                <div class="projects-category">
+                    <h3>Broadcast</h3>
+                </div>
+                <div class="projects-item">
+                    <h4>More stuff ig</h4>
                 </div>
             </div>
         </div>
