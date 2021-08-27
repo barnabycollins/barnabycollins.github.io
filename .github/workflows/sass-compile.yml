@@ -35,7 +35,10 @@ jobs:
 
       - name: Push changes to gh-pages
         run: |
+          git config --local user.email 'action@github.com'
+          git config --local user.name 'GitHub Actionz'
           git fetch --all
           git checkout -B gh-pages
           git add -f *
+          git commit -m "Compile stylesheets"
           git push -f --set-upstream origin gh-pages
