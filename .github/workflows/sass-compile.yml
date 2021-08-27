@@ -34,9 +34,7 @@ jobs:
           find . -name "*.scss" | xargs rm
 
       - name: Push changes to gh-pages
-        uses: dfm/force-push-branch-action@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          target-branch: "gh-pages"
-          commit-message: "Compile stylesheets"
-          path: "*"
+        run: |
+          git checkout -B gh-pages
+          git add -f *
+          git push -f
