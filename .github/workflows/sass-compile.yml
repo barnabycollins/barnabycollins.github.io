@@ -35,6 +35,7 @@ jobs:
 
       - name: Push changes to gh-pages
         run: |
+          git fetch --all
           git checkout -B gh-pages
           git add -f *
           git push -f
