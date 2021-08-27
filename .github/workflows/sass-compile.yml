@@ -40,5 +40,6 @@ jobs:
           git fetch --all
           git checkout -B gh-pages
           git add -f *
+          git rm .gitignore
           git commit -m "Compile stylesheets"
           git push -f --set-upstream origin gh-pages
