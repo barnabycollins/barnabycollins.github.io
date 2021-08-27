@@ -1,9 +1,3 @@
-const sectionsToNavs = {
-    'welcome': 'welcome-link',
-    'skills': 'skills-link',
-    'experience': 'experience-link'
-}
-
 let previouslyFocussed = 'welcome';
 
 function checkScroll() {
