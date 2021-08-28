@@ -141,6 +141,7 @@
                 <div class="projects-category" style="grid-row: 1 / span 3;">
                     <h3>Programming</h3>
                 </div>
+
                 <div class="projects-item" style="background-image: url(img/rocket-league.jpg);">
                     <div class="project-title">
                         <h4><a target="_blank" href="https://github.com/rewindrl/updater">Rewind Gaming: Broadcast Overlay Updater</a></h4>
@@ -164,7 +165,8 @@
                         <a target="_blank" href="https://github.com/GrandyB/SheetsIO">SheetsIO</a>.
                     </p>
                 </div>
-                <div class="projects-item" style="background-image: url(img/traymaster.jpg);">
+
+                <div class="projects-item" style="background-image: url(img/traymaster.jpg); background-position: top;">
                     <div class="project-title">
                         <h4><a target="_blank" href="https://github.com/Kacper-Lubisz/TrayMaster">TrayMaster</a></h4>
                         <ul class="uses-icon-links">
@@ -174,7 +176,7 @@
                     </div>
                     <p>
                         During my course, I was part of a 6-person group working on a project for the local foodbank.
-                        An existing <a href="https://barnabycollins.github.io/">inventory</a> management system had been designed in Excel VBA, but this had a
+                        An existing inventory management system had been designed in Excel VBA, but this had a
                         wide range of shortcomings including lack of scalability, poor user experience and extreme
                         difficulty of maintenance.
                     </p>
@@ -186,11 +188,13 @@
                     </p>
                     <p>
                         We all worked on the full stack, but my particular focus was on designing the UI to be
-                        intuitive, functional, responsive, clean, consistent and attractive. This was a particular
-                        challenge as the program was to be used as a Progressive Web App by untrained volunteers
-                        on dated Android tablets.
+                        intuitive, functional, responsive, clean, flexible, consistent and attractive. This was
+                        a particular challenge as the program was to be used as a Progressive Web App by untrained
+                        volunteers on dated Android tablets and the warehouse's structure varied between different
+                        areas.
                     </p>
                 </div>
+                
                 <div class="projects-item" style="background-image: url(img/ddjs.jpg); background-position: top;">
                     <div class="project-title">
                         <h4><a target="_blank" href="https://ddjs.uk">Durham DJ Society Website</a></h4>
@@ -208,18 +212,81 @@
                     <p>
                         A central part of our plans was to give the society a more slick appearance, so we began
                         by rebranding it and giving the website a corresponding facelift. I also added a more detailed
-                        '<a target="_blank" href="https://ddjs.uk">About</a>' page with information on the society's
-                        mission and executive committee, designed and documented some HTML stream widgets for
-                        members to use on their livestreams during the COVID-19 era, obtained a new domain name and
-                        set up an email system for the executive committee using Migadu.
+                        '<a target="_blank" href="https://ddjs.uk/about">About</a>' page with information on the
+                        society's mission and executive committee, designed and documented some HTML stream widgets
+                        for members to use on their livestreams during the COVID-19 era, obtained a new domain name
+                        and set up an email system for the executive committee using Migadu.
+                    </p>
+                    <p>
+                        The DJ profiles in particular have been designed to be easy to update, so they have been put
+                        into a JS structure that is used to generate the page. Corresponding documentation is also
+                        available on the <a href="https://github.com/DurhamDJ/DurhamDJ.github.io">GitHub
+                        repository</a> to ensure that future executive committee members are able to keep using it.
                     </p>
                 </div>
+
                 <div class="projects-separator"></div>
-                <div class="projects-category">
+                <div class="projects-category" style="grid-row: 5 / span 2;">
                     <h3>Broadcast</h3>
                 </div>
-                <div class="projects-item">
-                    <h4>More stuff ig</h4>
+
+                <div class="projects-item" style="background-image: url(img/colosseum.jpg);">
+                    <div class="project-title">
+                        <h4><a target="_blank" href="https://youtu.be/JtxqjWJkfVU">Rewind Gaming: The Colosseum</a></h4>
+                        <ul class="uses-icon-links">
+                            <li><a target="_blank" href="https://liquipedia.net/rocketleague/Rewind_Gaming/The_Colosseum"><i class="fab fa-wikipedia-w"></i></a>
+                            <li><a target="_blank" href="https://youtu.be/JtxqjWJkfVU"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <p>
+                        Taking place in summer 2018, the Colosseum was Rewind Gaming's first major tournament. On the
+                        team preparing for the event, I initially took responsibility for motion graphics and took
+                        charge of broadcasting alongside our other broadcaster,
+                        <a target="_blank" href="https://liquipedia.net/rocketleague/Bntsw">bntsw.</a>, who I had
+                        previously trained.
+                    </p>
+                    <p>
+                        I designed all moving graphics on the stream's overlay, including the transitions and
+                        occasional popups - predominantly animating static work from our graphic designers to produce
+                        attractive and professional content to raise the broadcast's production value. A series of
+                        these transitions can be found in the minute following
+                        <a target="_blank" href="https://youtu.be/JtxqjWJkfVU?t=15197">this point</a> in the recorded
+                        livestream of the finals, which I also produced on the day.
+                    </p>
+                    <p>
+                        We had tasked a member of the development team with writing a broadcast backend in
+                        <a target="_blank" href="https://www.nodecg.dev/">NodeCG</a>, but did not hear from him after
+                        some time, so I had the idea of using Google Sheets as a database and connecting with its API to
+                        update the overlays. Due to the short notice, I had to write the script and integrate it into
+                        our HTML overlays within a few days before they were needed. This was the first version of the
+                        Updater.js script mentioned <a href="#projects">above</a>, worked flawlessly, and paved the way
+                        for a range of other organisations who use the same methods to this day.
+                    </p>
+                </div>
+
+                <div class="projects-item" style="background-image: url(img/big-day-in.jpg); background-position: bottom;">
+                    <div class="project-title">
+                        <h4><a target="_blank" href="https://youtu.be/idJz1qzwR0o">Durham DJ Society's Big Day In</a></h4>
+                        <ul class="uses-icon-links">
+                            <li><a target="_blank" href="https://www.facebook.com/events/223179532338239/?active_tab=discussion"><i class="fab fa-facebook"></i></a>
+                            <li><a target="_blank" href="https://youtu.be/idJz1qzwR0o"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <p>
+                        During the summer of 2020, with most members in lockdown, we at DDJS organised a 10-hour
+                        livestream to showcase their talents and provide a focus for their efforts. I took charge of
+                        this as the most experienced exec member, and made the decision to host an RTMP server on the
+                        broadcast computer such that it consumed performers' audio and video streams and was able to
+                        compose them in a central broadcast. This method allowed us to maximise continuity between
+                        performers and make use of break screens between sets instead of forcing the audience to open
+                        a new stream for each set.
+                    </p>
+                    <p>
+                        I designed the graphics in collaboration with the president, Jake Roberts, organised the
+                        streaming and performer logistics, produced several transitions and animations and created a
+                        custom onscreen chat box by injecting custom CSS into the Mixcloud popout chat page. I also
+                        produced the livestream on the day and contributed my own hour-long set later in the evening.
+                    </p>
                 </div>
             </div>
         </div>
