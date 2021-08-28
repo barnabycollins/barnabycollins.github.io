@@ -295,6 +295,10 @@
         </div>
         <div id="contact">
             <h2>Contact</h2>
+            <p>
+                I haven't included much information on here for privacy reasons. If you're after a CV or more
+                information, please don't hesitate to get in touch using the form below!
+            </p>
             <form id="contact-form" method="POST" action="https://formspree.io/f/mrgrrgpv">
                 <div>
                     <label for="name">
@@ -316,8 +320,12 @@
                     </label>
                     <textarea name="message"></textarea>
                 </div>
+
+                <div class="contact-fullwidth contact-centre">
+                    <div class="g-recaptcha" data-sitekey="6LeW9C0cAAAAABKrlhQjcgqnxc7OsQEBiIePnj7C"></div>
+                </div>
                 
-                <div class="contact-fullwidth" id="contact-submit">
+                <div class="contact-fullwidth contact-centre">
                     <input type="submit" value="Submit" />
                 </div>
             </form>
@@ -329,5 +337,6 @@
 
     <!-- SCRIPTS -->
     <script src="js/nav-highlight.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>

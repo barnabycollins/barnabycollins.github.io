@@ -3,6 +3,19 @@
 $base-color: #1a1a1a;
 $sidebar-width: 300px;
 
+html {
+    scrollbar-color: #404040 $base-color;
+}
+
+/* doesn't work...?
+::-webkit-scrollbar-track {
+    background: $base-color;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #404040;
+}*/
+
 #sidebar {
     width: $sidebar-width;
     height: 100vh;
@@ -263,7 +276,7 @@ $sidebar-width: 300px;
                 display: flex;
                 flex-direction: column;
             
-                &#contact-submit {
+                &.contact-centre {
                     align-items: center;
     
                     input {
