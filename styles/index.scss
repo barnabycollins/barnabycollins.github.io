@@ -230,7 +230,61 @@ $sidebar-width: 300px;
             }
         }
     }
-    margin-bottom: 10000px;
+
+    #contact {
+
+        #contact-form {
+            padding: 0px 5vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 20px;
+            row-gap: 20px;
+
+            label {
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+
+            input, textarea {
+                border: none;
+                background-color: #f0f0f0;
+                font-size: 24px;
+                border-radius: 0px;
+                padding: 10px;
+            }
+
+            textarea {
+                resize: vertical;
+                font-size: 18px;
+                font-family: "Source Sans Pro", sans-serif;
+            }
+
+            > div {
+                display: flex;
+                flex-direction: column;
+            
+                &#contact-submit {
+                    align-items: center;
+    
+                    input {
+                        width: 30%;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .contact-fullwidth {
+                grid-column: 1 / span 2;
+            }
+        }
+    }
+
+    footer {
+        color: #ffffff;
+        background-color: $base-color;
+
+        padding: 3% 5%;
+    }
 }
 
 $fa-font-path: "/fonts/font-awesome/webfonts";

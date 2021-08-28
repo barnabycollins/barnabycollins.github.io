@@ -14,12 +14,14 @@
                 <li id="welcome-link" style="font-weight: 400;"><a href="#welcome">Welcome</a></li>
                 <li id="skills-link"><a href="#skills">Skills</a></li>
                 <li id="projects-link"><a href="#projects">Projects</a></li>
+                <li id="contact-link"><a href="#contact">Contact</a></li>
             </ul>
             <script>
                 const sectionsToNavs = {
                     'welcome': 'welcome-link',
                     'skills': 'skills-link',
-                    'projects': 'projects-link'
+                    'projects': 'projects-link',
+                    'contact': 'contact-link'
                 };
             </script>
         </div>
@@ -291,6 +293,38 @@
                 </div>
             </div>
         </div>
+        <div id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form" method="POST" action="https://formspree.io/f/mrgrrgpv">
+                <div>
+                    <label for="name">
+                        Your name
+                    </label>
+                    <input type="text" name="name" />
+                </div>
+
+                <div>
+                    <label for="email">
+                        Your email
+                    </label>
+                    <input type="email" name="email" />
+                </div>
+                
+                <div class="contact-fullwidth">
+                    <label for="message">
+                        Message
+                    </label>
+                    <textarea name="message"></textarea>
+                </div>
+                
+                <div class="contact-fullwidth" id="contact-submit">
+                    <input type="submit" value="Submit" />
+                </div>
+            </form>
+        </div>
+        <footer>
+            Insert something kinda cringe here.
+        </footer>
     </div>
 
     <!-- SCRIPTS -->
