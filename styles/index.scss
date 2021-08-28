@@ -275,6 +275,10 @@ html {
             > div {
                 display: flex;
                 flex-direction: column;
+
+                &.contact-fullwidth {
+                    grid-column: 1 / span 2;
+                }
             
                 &.contact-centre {
                     align-items: center;
@@ -284,10 +288,6 @@ html {
                         cursor: pointer;
                     }
                 }
-            }
-
-            .contact-fullwidth {
-                grid-column: 1 / span 2;
             }
         }
     }
