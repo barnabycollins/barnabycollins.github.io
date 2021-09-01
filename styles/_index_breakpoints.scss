@@ -21,7 +21,7 @@ $sidebar-width-reduced: 200px;
     }
 }
 
-@media screen and (max-width: 800px) and (orientation: portrait) {
+@media screen and (max-width: 800px) {
     #sidebar {
         display: none;
         height: 75vw;
