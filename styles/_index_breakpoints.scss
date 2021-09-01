@@ -24,18 +24,6 @@ $sidebar-width-reduced: 200px;
 @media screen and (max-width: 800px) {
     #sidebar {
         display: none;
-        height: 75vw;
-        width: 100vw;
-        position: sticky;
-        top: calc(1.6em + 5px - 75vw);
-
-        #sidebar-head {
-            height: 75vw;
-        }
-
-        >:not(#sidebar-head) {
-            display: none;
-        }
     }
     
     #content {
@@ -50,6 +38,18 @@ $sidebar-width-reduced: 200px;
                 font-size: 2.5em;
                 line-height: unset;
                 text-align: center;
+
+                &#welcome-h2 {
+                    font-size: 4em;
+                }
+            }
+        }
+
+        #welcome {
+            justify-content: space-between;
+            
+            #welcome-img {
+                display: block;
             }
         }
 
