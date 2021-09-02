@@ -1,7 +1,6 @@
 
 // If the navbar is visible
 if (!window.matchMedia("screen and (max-width: 800px)").matches) {
-    console.log("yes");
 
     let previouslyFocussed = 'welcome';
     
