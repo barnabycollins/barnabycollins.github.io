@@ -38,8 +38,14 @@ html {
         transform: rotate(90deg);
     }
 
-    * {
+    > a {
+        color: #ffffff;
+        border-color: #ffffff00;
         z-index: 31;
+
+        &:hover {
+            border-color: #ffffffff;
+        }
     }
 
     &::after {
