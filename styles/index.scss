@@ -16,6 +16,46 @@ html {
     background: #404040;
 }*/
 
+#blog-banner {
+    position: fixed;
+    top: 3vh;
+    right: 0;
+
+    z-index: 30;
+
+    display: flex;
+    align-items: center;
+
+    background-color: $base-color;
+    color: #ffffff;
+
+    padding: 1vh;
+
+    i {
+        margin-left: .5em;
+
+        // font awesome pro here we come
+        transform: rotate(90deg);
+    }
+
+    * {
+        z-index: 31;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        background: inherit;
+        z-index: 29;
+        top: 0;
+        bottom: 1px;
+        left: 0;
+        right: 0;
+        transform-origin: left bottom;
+        transform: skewX(10deg);
+    }
+}
+
 #sidebar {
     width: $sidebar-width;
     height: 100vh;
