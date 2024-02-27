@@ -1,5 +1,5 @@
 
-// If the navbar is visible
+// If the sidebar nav is visible
 if (!window.matchMedia("screen and (max-width: 800px)").matches) {
 
     let previouslyFocussed = 'welcome';

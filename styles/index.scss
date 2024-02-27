@@ -170,8 +170,8 @@ html {
             margin: 0px;
 
             &#welcome-h2 {
-                font-size: calc(min(5vw, 8vh));
-                line-height: 7vh;
+                font-size: calc(min(5vw, 6vh));
+                line-height: 5vh;
             }
 
             &:not(#welcome-h2) {
@@ -212,7 +212,7 @@ html {
             margin: 10vh 0px 15vh;
 
             p {
-                font-size: 1.4em;
+                font-size: 1.2em;
             }
         }
     }
@@ -230,13 +230,13 @@ html {
 
                 text-align: left;
 
-                font-size: 1.5em;
+                font-size: 1.2em;
 
                 grid-column: 1;
             }
 
             .skills-content {
-                font-size: 1.35em;
+                font-size: 1.2em;
                 font-weight: 300;
 
                 display: flex;
